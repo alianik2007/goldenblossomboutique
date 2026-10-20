@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Administration • Golden Blossom Boutique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0a09;
+      --bg-card: #141412;
+      --bg-card-hover: #1c1c19;
+      --border-color: rgba(197, 160, 89, 0.22);
+      --border-highlight: rgba(197, 160, 89, 0.5);
+      --gold-primary: #C5A059;
+      --gold-light: #E5C378;
+      --gold-dark: #9E7734;
+      --text-main: #F4EFE6;
+      --text-muted: #A39D93;
+      --accent-red: #E05252;
+      --accent-green: #2ecc71;
+      --font-serif: 'Playfair Display', serif;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Montserrat', sans-serif;
+      --radius: 8px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+    }
+
+    /* =========================================================================
+       LOGIN GATE OVERLAY (PASSWORD: Gb260000)
+       ========================================================================= */
+    .login-gate-overlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at center, #1b1a17 0%, #080807 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 1.5rem;
+    }
+
+    .login-card {
+      background: #141412;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 440px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.9);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .login-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+    }
+
+    .login-crest {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1.25rem;
+      border: 1px solid var(--gold-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      background: rgba(197, 160, 89, 0.1);
+      box-shadow: 0 0 25px rgba(197, 160, 89, 0.2);
+    }
+
+    .login-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      margin-bottom: 0.35rem;
+    }
+
+    .login-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      line-height: 1.4;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      text-align: left;
+    }
+
+    .login-pass-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .login-input {
+      width: 100%;
+      background: #0d0d0c;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 13px 45px 13px 16px;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+
+    .login-input:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 12px rgba(197, 160, 89, 0.2);
+    }
+
+    .toggle-pass-btn {
+      position: absolute;
+      right: 12px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+    }
+
+    .toggle-pass-btn:hover {
+      color: var(--gold-light);
+    }
+
+    .btn-unlock {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+      border: none;
+      color: #121110;
+      padding: 13px;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 0 4px 20px rgba(197, 160, 89, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    .btn-unlock:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .login-error {
+      color: var(--accent-red);
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      display: none;
+      text-align: center;
+    }
+
+    /* Top Admin Bar */
+    .admin-header {
+      background: rgba(16, 16, 14, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 2rem;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--gold-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-primary);
+      background: rgba(197, 160, 89, 0.1);
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+    }
+
+    .brand-subtitle {
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-view-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      border-radius: var(--radius);
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-view-store:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-light);
+    }
+
+    .btn-excel-import-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: rgba(46, 204, 113, 0.12);
+      border: 1px solid rgba(46, 204, 113, 0.4);
+      color: #2ecc71;
+      font-weight: 600;
+      font-size: 0.84rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-excel-import-header:hover {
+      background: #2ecc71;
+      color: #000;
+      transform: translateY(-1px);
+    }
+
+    .btn-lock-portal {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      background: rgba(224, 82, 82, 0.1);
+      border: 1px solid rgba(224, 82, 82, 0.3);
+      color: #ff7675;
+      border-radius: var(--radius);
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-lock-portal:hover {
+      background: var(--accent-red);
+      color: #fff;
+    }
+
+    .btn-danger-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 14px;
+      background: rgba(231, 76, 60, 0.12);
+      border: 1px solid rgba(231, 76, 60, 0.4);
+      color: #ff7675;
+      border-radius: var(--radius);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-danger-outline:hover {
+      background: #e74c3c;
+      color: #fff;
+      border-color: #e74c3c;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+    }
+
+    .stat-reset-btn {
+      background: transparent;
+      border: 1px dashed rgba(231, 76, 60, 0.45);
+      color: #ff7675;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .stat-reset-btn:hover {
+      background: rgba(231, 76, 60, 0.2);
+      border-color: #e74c3c;
+      color: #fff;
+    }
+
+    .btn-primary-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 20px;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+      border: none;
+      color: #121110;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(197, 160, 89, 0.25);
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary-action:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    /* Main Container */
+    .admin-main {
+      flex: 1;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Tabs Bar */
+    .admin-tabs {
+      display: flex;
+      gap: 12px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+    }
+
+    .tab-btn.active {
+      color: var(--gold-light);
+      border-bottom-color: var(--gold-primary);
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--gold-primary);
+    }
+
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(197, 160, 89, 0.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-primary);
+      flex-shrink: 0;
+    }
+
+    .stat-info h3 {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .stat-info .stat-value {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--text-main);
+      font-family: var(--font-serif);
+    }
+
+    /* Control Bar */
+    .content-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .search-filter-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+
+    .admin-search-input {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 10px 16px;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      min-width: 260px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .admin-search-input:focus {
+      border-color: var(--gold-primary);
+    }
+
+    .admin-select {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .admin-select:focus {
+      border-color: var(--gold-primary);
+    }
+
+    /* Products Table */
+    .table-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      overflow-x: auto;
+      box-shadow: var(--shadow);
+    }
+
+    table.admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    table.admin-table th {
+      background: rgba(25, 25, 22, 0.7);
+      padding: 14px 18px;
+      color: var(--gold-light);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    table.admin-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+      vertical-align: middle;
+    }
+
+    table.admin-table tr:hover td {
+      background: var(--bg-card-hover);
+    }
+
+    .prod-cell {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .prod-thumb {
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid var(--border-color);
+      background: #1e1e1b;
+      flex-shrink: 0;
+    }
+
+    .prod-title {
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 2px;
+      max-width: 280px;
+    }
+
+    .prod-id {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+
+    .category-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: rgba(197, 160, 89, 0.12);
+      color: var(--gold-light);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: rgba(229, 195, 120, 0.15);
+      color: var(--gold-light);
+    }
+
+    .price-cell {
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+
+    .orig-price {
+      text-decoration: line-through;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      margin-left: 4px;
+    }
+
+    .stock-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    .stock-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+
+    .stock-in .stock-dot { background: var(--accent-green); }
+    .stock-low .stock-dot { background: #f39c12; }
+    .stock-out .stock-dot { background: var(--accent-red); }
+
+    .action-btns-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-edit, .btn-delete {
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .btn-edit {
+      background: rgba(197, 160, 89, 0.15);
+      border-color: rgba(197, 160, 89, 0.3);
+      color: var(--gold-light);
+    }
+
+    .btn-edit:hover {
+      background: var(--gold-primary);
+      color: #000;
+    }
+
+    .btn-delete {
+      background: rgba(224, 82, 82, 0.1);
+      border-color: rgba(224, 82, 82, 0.3);
+      color: #ff7675;
+    }
+
+    .btn-delete:hover {
+      background: var(--accent-red);
+      color: #fff;
+    }
+
+    /* =========================================================================
+       AI EXCEL IMPORTER MODAL
+       ========================================================================= */
+    .excel-dropzone {
+      border: 2px dashed rgba(197, 160, 89, 0.4);
+      background: rgba(197, 160, 89, 0.04);
+      border-radius: 10px;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .excel-dropzone:hover, .excel-dropzone.dragover {
+      border-color: var(--gold-light);
+      background: rgba(197, 160, 89, 0.1);
+      transform: scale(1.005);
+    }
+
+    .dropzone-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 1rem;
+      color: #2ecc71;
+      background: rgba(46, 204, 113, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dropzone-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .dropzone-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .dropzone-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .excel-preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .excel-preview-counter {
+      font-size: 0.9rem;
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .excel-preview-table-box {
+      max-height: 320px;
+      overflow-y: auto;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+      background: #0e0e0d;
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: #141412;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 840px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      padding: 1.25rem 1.75rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .modal-header h2 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--gold-light);
+    }
+
+    .close-modal-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+
+    .close-modal-btn:hover {
+      color: var(--text-main);
+    }
+
+    .modal-body {
+      padding: 1.75rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .form-input, .form-textarea, .form-select {
+      background: #0d0d0c;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      border-color: var(--gold-primary);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 75px;
+    }
+
+    .img-preview-box {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .preview-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      background: #000;
+    }
+
+    .modal-footer {
+      padding: 1.25rem 1.75rem;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      background: #11110f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 9px 18px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      color: var(--text-main);
+      border-color: var(--text-main);
+    }
+
+    /* Website Settings View */
+    .settings-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 2rem;
+      max-width: 900px;
+      box-shadow: var(--shadow);
+    }
+
+    .settings-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--gold-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .settings-desc {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Toast */
+    .admin-toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #1c1c19;
+      border: 1px solid var(--gold-primary);
+      color: var(--text-main);
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 2000;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      font-size: 0.88rem;
+    }
+
+    .admin-toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .admin-main { padding: 1rem; }
+      .form-grid { grid-template-columns: 1fr; }
+      .header-container { padding: 0 1rem; }
+      .brand-title { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================================
+       PASSWORD SECURITY GATE (Gb260000)
+       ========================================================================= -->
+  <div class="login-gate-overlay" id="loginGate">
+    <div class="login-card">
+      <div class="login-crest">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+      </div>
+      <h1 class="login-title">ATELIER CLEARANCE</h1>
+      <p class="login-subtitle">Restricted Administrator Console • Golden Blossom Boutique. Please enter your administrative key to unlock the portal.</p>
+
+      <form id="adminLoginForm" class="login-form">
+        <div class="login-pass-wrap">
+          <input type="password" id="adminPasswordInput" class="login-input" placeholder="Enter Administrative Password" required autofocus autocomplete="current-password">
+          <button type="button" class="toggle-pass-btn" id="togglePasswordBtn" title="Show/Hide password" aria-label="Toggle password visibility">
+            <svg id="eyeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </button>
+        </div>
+        <button type="submit" class="btn-unlock" id="btnUnlockPortal">Unlock Portal</button>
+        <div class="login-error" id="loginErrorMessage">⚠️ Incorrect administrative clearance key. Access denied.</div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       ADMINISTRATOR PORTAL (AUTHENTICATED)
+       ========================================================================= -->
+  <div id="adminApp" style="display: none; flex-direction: column; min-height: 100vh;">
+    <!-- Top Admin Bar -->
+    <header class="admin-header">
+      <div class="header-container">
+        <a href="/admin" class="brand-wrap">
+          <div class="brand-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <span class="brand-title">GOLDEN BLOSSOM</span>
+            <span class="brand-subtitle">Atelier Administration & Product CMS</span>
+          </div>
+        </a>
+
+        <div class="header-actions">
+          <a href="/" class="btn-view-store" target="_blank" title="Open customer website in new tab">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Live Storefront
+          </a>
+          <button class="btn-excel-import-header" id="openExcelModalBtn" title="Upload Excel spreadsheet with products">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Import Excel with AI
+          </button>
+          <button class="btn-primary-action" id="openAddProductBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add New Product
+          </button>
+          <button class="btn-lock-portal" id="btnLockPortal" title="Lock session & Log out">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            Lock
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Body -->
+    <main class="admin-main">
+      
+      <!-- Top Stats -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <div class="stat-info">
+            <h3>Total Products</h3>
+            <div class="stat-value" id="statTotalProducts">16</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <div class="stat-info">
+            <h3>Active In Stock</h3>
+            <div class="stat-value" id="statInStock">16</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
+          <div class="stat-info">
+            <h3>Orders Received</h3>
+            <div class="stat-value" id="statTotalOrders">0</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <div class="stat-info">
+            <h3>Total Sales (Income)</h3>
+            <div class="stat-value" id="statRevenue">0 MAD</div>
+            <button type="button" class="stat-reset-btn" id="btnQuickResetStats" title="Reset all orders and reset revenue to 0 MAD">↺ Reset to 0 MAD</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation Tabs -->
+      <nav class="admin-tabs">
+        <button class="tab-btn active" data-tab="tab-products">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Products Management (<span id="tabCountProducts">16</span>)
+        </button>
+        <button class="tab-btn" data-tab="tab-website">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          Website Content & Banners
+        </button>
+        <button class="tab-btn" data-tab="tab-orders">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Customer Orders & WhatsApp Log (<span id="tabCountOrders">0</span>)
+        </button>
+      </nav>
+
+      <!-- TAB 1: PRODUCTS MANAGEMENT -->
+      <section class="tab-content active" id="tab-products">
+        <div class="content-controls">
+          <div class="search-filter-box">
+            <input type="text" id="adminSearchInput" class="admin-search-input" placeholder="Search by title, material, category...">
+            <select id="adminCategoryFilter" class="admin-select">
+              <option value="all">All Categories</option>
+              <option value="jewelry">Jewelry (Fine Gold)</option>
+              <option value="apparel">Apparel & Silks</option>
+              <option value="accessories">Bags & Accessories</option>
+            </select>
+            <select id="adminStockFilter" class="admin-select">
+              <option value="all">All Stock Statuses</option>
+              <option value="instock">In Stock (1+)</option>
+              <option value="outofstock">Out of Stock (0)</option>
+            </select>
+          </div>
+
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <button class="btn-excel-import-header" id="openExcelModalBtn2">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
+              Upload Excel File
+            </button>
+            <button class="btn-primary-action" id="openAddProductBtn2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              Add Product
+            </button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price (MAD)</th>
+                <th>Stock</th>
+                <th>Badge</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="productsTableBody">
+              <!-- Dynamically Rendered -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- TAB 2: WEBSITE CONTENT & BANNERS -->
+      <section class="tab-content" id="tab-website">
+        <div class="settings-card">
+          <h2 class="settings-title">Website Content & Announcements</h2>
+          <p class="settings-desc">Modify the headline, promotional announcement banner, WhatsApp contact, and boutique information shown to all customers.</p>
+
+          <form id="websiteSettingsForm">
+            <div class="form-grid">
+              <div class="form-group form-full">
+                <label for="setAnnouncementText">Top Announcement Banner Text</label>
+                <input type="text" id="setAnnouncementText" class="form-input" required>
+              </div>
+
+              <div class="form-group form-full">
+                <label for="setHeroHeading">Homepage Hero Headline</label>
+                <input type="text" id="setHeroHeading" class="form-input" required>
+              </div>
+
+              <div class="form-group form-full">
+                <label for="setHeroSubheading">Homepage Hero Tagline</label>
+                <textarea id="setHeroSubheading" class="form-textarea" rows="2" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="setBoutiquePhone">Boutique WhatsApp Number</label>
+                <input type="text" id="setBoutiquePhone" class="form-input" placeholder="+212 780-760188" required>
+              </div>
+
+              <div class="form-group">
+                <label for="setFreeShipping">Free Shipping Threshold (MAD)</label>
+                <input type="number" id="setFreeShipping" class="form-input" value="500" required>
+              </div>
+
+              <div class="form-group">
+                <label for="setBoutiqueEmail">Official Email</label>
+                <input type="email" id="setBoutiqueEmail" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="setBoutiqueAddress">Physical Showroom / City</label>
+                <input type="text" id="setBoutiqueAddress" class="form-input" required>
+              </div>
+
+              <div class="form-group form-full" style="margin-top: 1rem;">
+                <button type="submit" class="btn-primary-action" style="align-self: flex-start;">
+                  Save Website Settings
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- TAB 3: CUSTOMER ORDERS & WHATSAPP LOG -->
+      <section class="tab-content" id="tab-orders">
+        <div class="content-controls">
+          <div style="font-size: 0.95rem; color: var(--gold-light); font-weight: 600;">
+            Live Order Submissions & Autonomous WhatsApp Logs
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <button type="button" class="btn-secondary" id="refreshOrdersBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+              Refresh Orders
+            </button>
+            <button type="button" class="btn-danger-outline" id="btnResetOrders" title="Reset all customer orders and set revenue back to 0 MAD">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+              Reset Orders & Income (0 MAD)
+            </button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>City / Address</th>
+                <th>Items</th>
+                <th>Total (MAD)</th>
+                <th>Payment</th>
+                <th>WhatsApp Alert</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTableBody">
+              <!-- Dynamically populated from /api/orders -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- =========================================================================
+       AI EXCEL / CSV IMPORTER MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="excelModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2ecc71" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
+          <h2>Import Products from Excel with AI</h2>
+        </div>
+        <button class="close-modal-btn" id="closeExcelModalBtn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Dropzone -->
+        <div class="excel-dropzone" id="excelDropzone">
+          <div class="dropzone-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          </div>
+          <div class="dropzone-title">Upload Excel Spreadsheet (.xlsx, .xls) or CSV</div>
+          <p class="dropzone-subtitle">The AI automatically recognizes column headers in English or French (Title, Prix, Catégorie, Photo, Stock, etc.) and enriches missing fields.</p>
+          <input type="file" id="excelFileInput" accept=".xlsx, .xls, .csv" style="display: none;">
+          
+          <div class="dropzone-actions">
+            <button type="button" class="btn-primary-action" id="btnSelectExcelFile" style="font-size: 0.82rem; padding: 8px 18px;">
+              📁 Browse Excel File
+            </button>
+            <button type="button" class="btn-secondary" id="btnDownloadTemplate" style="font-size: 0.82rem; padding: 8px 16px;">
+              📥 Download Sample Template (.csv)
+            </button>
+          </div>
+        </div>
+
+        <!-- Parsed Products Preview Box (Hidden until file selected) -->
+        <div id="excelPreviewSection" style="display: none;">
+          <div class="excel-preview-header">
+            <div>
+              <span class="excel-preview-counter" id="excelParsedCount">0 Products Detected by AI</span>
+              <span style="font-size: 0.76rem; color: #2ecc71; margin-left: 8px; font-weight: 600;">✨ Columns mapped & enriched</span>
+            </div>
+            <button type="button" class="btn-secondary" id="btnClearExcelFile" style="padding: 4px 10px; font-size: 0.74rem;">Change File</button>
+          </div>
+
+          <div class="excel-preview-table-box">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Category</th>
+                  <th>Price (MAD)</th>
+                  <th>Stock</th>
+                  <th>AI Status</th>
+                </tr>
+              </thead>
+              <tbody id="excelPreviewTableBody">
+                <!-- Dynamically generated rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" id="cancelExcelBtn">Cancel</button>
+        <button type="button" class="btn-primary-action" id="btnConfirmExcelImport" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; display: none;">
+          ✨ Add Products to System Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       ADD / EDIT PRODUCT MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="modalTitle">Add New Product</h2>
+        <button class="close-modal-btn" id="closeProductModalBtn">&times;</button>
+      </div>
+
+      <form id="productForm" novalidate>
+        <div class="modal-body">
+          <input type="hidden" id="prodEditId">
+          
+          <!-- Inline Error Alert Banner -->
+          <div id="productModalError" style="display:none; color: #ff7675; background: rgba(224, 82, 82, 0.12); border: 1px solid rgba(224, 82, 82, 0.35); padding: 10px 14px; border-radius: 6px; font-size: 0.85rem; margin-bottom: 1.25rem; align-items: center; gap: 8px;"></div>
+
+          <div class="form-grid">
+            <div class="form-group form-full">
+              <label for="prodTitle">Product Title / Name *</label>
+              <input type="text" id="prodTitle" class="form-input" placeholder="e.g. The Molten Gold Talisman Pendant">
+            </div>
+
+            <div class="form-group">
+              <label for="prodCategory">Category *</label>
+              <select id="prodCategory" class="form-select">
+                <option value="jewelry">Jewelry (Fine Gold)</option>
+                <option value="apparel">Apparel & Silks</option>
+                <option value="accessories">Bags & Accessories</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="prodBadge">Badge (Optional)</label>
+              <select id="prodBadge" class="form-select">
+                <option value="">None</option>
+                <option value="Bestseller">Bestseller</option>
+                <option value="New In">New In</option>
+                <option value="Atelier Pick">Atelier Pick</option>
+                <option value="Limited">Limited Edition</option>
+                <option value="Iconic">Iconic</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="prodPriceMAD">Price in MAD (Prix) *</label>
+              <input type="text" inputmode="decimal" id="prodPriceMAD" class="form-input" placeholder="e.g. 890 or 890 MAD">
+            </div>
+
+            <div class="form-group">
+              <label for="prodOriginalPriceMAD">Original Price (Ancien Prix, Optional)</label>
+              <input type="text" inputmode="decimal" id="prodOriginalPriceMAD" class="form-input" placeholder="e.g. 1100">
+            </div>
+
+            <div class="form-group">
+              <label for="prodStockCount">Stock Units Available *</label>
+              <input type="text" inputmode="numeric" id="prodStockCount" class="form-input" value="5" placeholder="5">
+            </div>
+
+            <div class="form-group">
+              <label for="prodMaterialType">Material Classification</label>
+              <select id="prodMaterialType" class="form-select">
+                <option value="vermeil">18K Gold Vermeil</option>
+                <option value="pearl">Freshwater Pearl</option>
+                <option value="silk">Mulberry Silk</option>
+                <option value="leather">Italian Leather</option>
+                <option value="cashmere">Cashmere</option>
+              </select>
+            </div>
+
+            <div class="form-group form-full">
+              <label for="prodMaterial">Material Composition Details</label>
+              <input type="text" id="prodMaterial" class="form-input" placeholder="e.g. 18K Heavy Gold Vermeil • Recycled 925 Silver">
+            </div>
+
+            <div class="form-group form-full">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <label for="prodImg" style="margin: 0;">Main Image URL (Optional)</label>
+                <button type="button" class="btn-secondary" id="btnUseSampleImg" style="padding: 3px 8px; font-size: 0.72rem; border-color: var(--gold-primary); color: var(--gold-light);">✨ Auto-Fill Sample Photo</button>
+              </div>
+              <input type="text" id="prodImg" class="form-input" placeholder="Paste image link, or leave empty for automatic luxury image">
+              <div class="img-preview-box">
+                <img id="mainImgPreview" class="preview-img" src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=150&q=80" alt="Preview">
+                <span style="font-size: 0.76rem; color: var(--text-muted);">Paste an image URL or leave blank to use an atelier curated photo.</span>
+              </div>
+            </div>
+
+            <div class="form-group form-full">
+              <label for="prodDescription">Product Description</label>
+              <textarea id="prodDescription" class="form-textarea" placeholder="Handcrafted with precision..."></textarea>
+            </div>
+
+            <div class="form-group form-full">
+              <label for="prodSizes">Available Sizes / Options (Comma separated)</label>
+              <input type="text" id="prodSizes" class="form-input" placeholder="e.g. Small (17cm), Medium (19cm) or XS (34), S (36), M (38)">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" id="cancelProductBtn">Cancel</button>
+          <button type="submit" class="btn-primary-action" id="saveProductBtn">✓ Valider & Enregistrer (Save Product)</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="admin-toast" id="adminToast"></div>
+
+  <!-- SheetJS Library for Excel Parsing (.xlsx, .xls, .csv) -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

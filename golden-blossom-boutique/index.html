@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Golden Blossom Boutique | Everyday Elegance & Quiet Luxury • Casablanca</title>
+  <meta name="description" content="Casablanca's premier quiet luxury fashion house — 18K molten gold jewelry, Mulberry silk apparel, artisanal leather bags, and boots. Express 24-48h delivery across Morocco with Cash on Delivery.">
+  <meta name="keywords" content="Golden Blossom Boutique, Casablanca fashion, quiet luxury, 18k gold vermeil, molten jewelry, Moroccan boutique, luxury jewelry, silk slip dress, leather boots Morocco">
+  <meta property="og:title" content="Golden Blossom Boutique | Quiet Luxury & Everyday Elegance">
+  <meta property="og:description" content="Not made to impress. Made to belong. Curated fine jewelry, timeless silks, and artisanal leathercraft.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://goldenblossomboutique.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Google Fonts: Editorial Serif + Modern Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data: Organization & Store -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Golden Blossom Boutique",
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+    "description": "Casablanca's premier lifestyle and fashion boutique for quiet luxury, molten gold jewelry, and curated apparel.",
+    "email": "hello@goldenblossomboutique.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Boulevard d'Anfa, Triangle d'Or",
+      "addressLocality": "Casablanca",
+      "addressCountry": "MA"
+    },
+    "priceRange": "$$",
+    "currenciesAccepted": "MAD, EUR, USD, GBP"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       TOP ANNOUNCEMENT BAR & UTILITIES
+       ========================================================================= -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="announcement-container">
+      <div class="announcement-slider" id="announcementSlider">
+        <div class="announcement-item active">
+          <span>✨ <strong>LIVRAISON GRATUITE</strong> sur toutes les commandes supérieures à 500 MAD au Maroc • Paiement à la livraison</span>
+        </div>
+        <div class="announcement-item">
+          <span>🌿 The <strong>Molten Gold 'Lava' Collection</strong> has officially landed • Limited 18K atelier drops</span>
+        </div>
+        <div class="announcement-item">
+          <span>🎁 Welcome to Golden Blossom: Use code <strong>GOLDEN10</strong> for 10% off your first order</span>
+        </div>
+      </div>
+
+      <div class="announcement-controls">
+        <!-- Audio Chime Toggle -->
+        <button class="audio-toggle-btn" id="audioToggleBtn" title="Toggle audio chime on bag addition" aria-label="Toggle bag sound">
+          <span class="audio-icon" id="audioIcon">🔔</span>
+          <span class="audio-label">Sound: On</span>
+        </button>
+
+        <!-- Currency Selector -->
+        <div class="currency-picker">
+          <label for="currencySelect" class="sr-only">Select Currency</label>
+          <select id="currencySelect" aria-label="Currency Selector">
+            <option value="MAD" selected>MAD (د.م.)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="USD">USD ($)</option>
+            <option value="GBP">GBP (£)</option>
+          </select>
+        </div>
+
+        <!-- Direct VIP Concierge Link -->
+        <a href="https://wa.me/212780760188?text=Hello%20Golden%20Blossom%20Boutique,%20I%20would%20like%20assistance%20with%20an%20order" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="vip-concierge-link" 
+           title="WhatsApp VIP Concierge (+212 780-760188)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.533 1.942.825 3.149.825l.001-.001c3.182 0 5.768-2.586 5.768-5.766 0-3.18-2.586-5.766-5.769-5.766zm0-2.172c4.418 0 8 3.582 8 8 0 1.545-.44 2.99-1.203 4.22l1.172 4.28-4.38-1.15c-1.19.71-2.57 1.13-4.047 1.13-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/></svg>
+          <span>VIP Concierge</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       STICKY LUXURY NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <!-- Mobile Menu Trigger -->
+      <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Desktop Navigation Left -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#new-in" class="nav-link" data-filter="bestseller">New & Drops</a></li>
+          <li class="has-dropdown">
+            <a href="#catalog" class="nav-link" data-category="jewelry">
+              Jewelry
+              <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </a>
+            <div class="nav-dropdown">
+              <div class="dropdown-inner">
+                <div class="dropdown-col">
+                  <h4 class="dropdown-heading">By Category</h4>
+                  <a href="#catalog" data-filter="jewelry" class="dropdown-item">All Fine Jewelry</a>
+                  <a href="#catalog" data-filter="jewelry" class="dropdown-item">The Molten 'Lava' Series</a>
+                  <a href="#catalog" data-filter="jewelry" class="dropdown-item">Sculptural Hoops & Earrings</a>
+                  <a href="#catalog" data-filter="jewelry" class="dropdown-item">Talisman Necklaces & Chokers</a>
+                  <a href="#catalog" data-filter="jewelry" class="dropdown-item">Casablanca Signet & Dome Rings</a>
+                </div>
+                <div class="dropdown-col">
+                  <h4 class="dropdown-heading">Craftsmanship</h4>
+                  <span class="dropdown-subtext">3-Micron 18K Solid Heavy Vermeil</span>
+                  <span class="dropdown-subtext">Recycled 925 Sterling Silver</span>
+                  <span class="dropdown-subtext">Natural AAA Baroque Pearls</span>
+                  <div class="dropdown-featured-tag">100% Water-Resistant & Tarnish-Free</div>
+                  <button type="button" class="btn-text-link" id="navOpenSizeGuideBtn" style="margin-top: 1rem; font-size: 0.75rem; color: var(--gold-dark); font-weight: 600; text-decoration: underline;">
+                    📐 View Ring & Fit Sizing Guide
+                  </button>
+                </div>
+                <div class="dropdown-banner">
+                  <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=400&q=80" alt="Molten Jewelry">
+                  <div class="banner-overlay">
+                    <span class="banner-badge">Hand-Cast Atelier</span>
+                    <span class="banner-title">The Lava Series</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="#catalog" class="nav-link" data-category="apparel">Apparel & Silks</a></li>
+          <li><a href="#catalog" class="nav-link" data-category="accessories">Bags & Boots</a></li>
+          <li><a href="#lookbook" class="nav-link">Lookbook</a></li>
+          <li><a href="#brand-story" class="nav-link">Atelier Story</a></li>
+        </ul>
+      </nav>
+
+      <!-- Center Logo & Blossom Monogram -->
+      <a href="#" class="brand-logo" aria-label="Golden Blossom Boutique Home">
+        <div class="logo-emblem">
+          <svg class="blossom-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" stroke="var(--gold-primary)" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.6"/>
+            <!-- Stylized Blossom Petals -->
+            <path d="M20 7C22 13 25 17 31 17C25 19 22 23 20 33C18 23 15 19 9 17C15 17 18 13 20 7Z" fill="url(#goldGradient)" />
+            <circle cx="20" cy="20" r="3" fill="#ffffff" />
+            <defs>
+              <linearGradient id="goldGradient" x1="9" y1="7" x2="31" y2="33" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E5C378"/>
+                <stop offset="0.5" stop-color="#C5A059"/>
+                <stop offset="1" stop-color="#9E7734"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">GOLDEN BLOSSOM</span>
+          <span class="logo-subtitle">BOUTIQUE • CASABLANCA</span>
+        </div>
+      </a>
+
+      <!-- Header Actions Right -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <button class="action-btn" id="searchTriggerBtn" aria-label="Open search dialog" title="Search catalog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Wishlist Trigger -->
+        <button class="action-btn" id="wishlistTriggerBtn" aria-label="Open wishlist" title="Saved favorites">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-count" id="wishlistCount">0</span>
+        </button>
+
+        <!-- Cart Trigger -->
+        <button class="action-btn cart-btn" id="cartTriggerBtn" aria-label="View shopping bag" title="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge-count" id="cartCount">0</span>
+          <span class="cart-total-badge" id="cartHeaderTotal">0 MAD</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================= -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-brand-title">GOLDEN BLOSSOM</div>
+      <button class="close-drawer-btn" id="closeMobileDrawerBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-drawer-content">
+      <ul class="mobile-nav-list">
+        <li><a href="#catalog" class="mobile-link" data-filter="bestseller">New In & Bestsellers <span class="tag-new">Hot</span></a></li>
+        <li><a href="#catalog" class="mobile-link" data-filter="jewelry">Jewelry & The Lava Series</a></li>
+        <li><a href="#catalog" class="mobile-link" data-filter="apparel">Apparel & Pure Silks</a></li>
+        <li><a href="#catalog" class="mobile-link" data-filter="accessories">Artisan Leather Bags & Boots</a></li>
+        <li><a href="#lookbook" class="mobile-link">The 2026 Lookbook</a></li>
+        <li><a href="#brand-story" class="mobile-link">Our Atelier & Heritage</a></li>
+        <li><button type="button" class="mobile-link-btn" id="mobileSizeGuideBtn">📐 Sizing Guide (Rings & Apparel)</button></li>
+        <li><a href="#contact-faq" class="mobile-link">Livraison Express Maroc (COD)</a></li>
+      </ul>
+
+      <div class="mobile-drawer-footer">
+        <div class="mobile-currency-row">
+          <span>Currency:</span>
+          <select id="mobileCurrencySelect">
+            <option value="MAD">MAD (د.م.)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="USD">USD ($)</option>
+            <option value="GBP">GBP (£)</option>
+          </select>
+        </div>
+        <div class="mobile-contact-card">
+          <p class="tagline">"Not made to impress. Made to belong."</p>
+          <a href="mailto:hello@goldenblossomboutique.com" class="mobile-email">hello@goldenblossomboutique.com</a>
+          <p class="boutique-location">Casablanca, Morocco • Delivery Nationwide</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       HERO EDITORIAL SECTION
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-media">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2000&q=85" 
+           alt="Golden Blossom Boutique Luxury Editorial Collection" 
+           class="hero-img active" 
+           id="heroImagePrimary">
+      <div class="hero-gradient-overlay"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-dot"></span>
+          <span>Casablanca Atelier • Seasonal Drop 2026</span>
+        </div>
+
+        <h1 class="hero-heading">
+          Quiet Luxury.<br>
+          <em>Everyday Elegance.</em>
+        </h1>
+
+        <p class="hero-description">
+          Not made to impress. Made to belong. Discover artisanal 18K molten gold jewelry, fluid bias-cut silks, and architectural leathercraft tailored for the modern woman.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#catalog" class="btn btn-primary" id="heroShopBtn">
+            <span>Explore The Collection</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#lookbook" class="btn btn-outline">
+            <span>View 2026 Lookbook</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">18K</span>
+            <span class="stat-label">Molten Gold Vermeil</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Artisanal Craftsmanship</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">24-48h</span>
+            <span class="stat-label">Express Morocco Shipping</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#categories" class="hero-scroll-indicator" aria-label="Scroll to curated collections">
+      <span>DISCOVER</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- =========================================================================
+       TRUST ASSURANCE STRIP
+       ========================================================================= -->
+  <section class="trust-strip">
+    <div class="trust-container">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        </div>
+        <div class="trust-text">
+          <strong>18K Heavy Gold Vermeil</strong>
+          <span>Water-resistant, hypoallergenic & crafted to last</span>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        </div>
+        <div class="trust-text">
+          <strong>Livraison Partout au Maroc</strong>
+          <span>Fast 24-48h courier dispatch across all cities</span>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="trust-text">
+          <strong>Paiement à la Livraison (COD)</strong>
+          <span>Inspect upon delivery and pay cash to courier</span>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <div class="trust-text">
+          <strong>VIP Personal Styling</strong>
+          <span>Direct WhatsApp concierge for curated sizing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CURATED CATEGORY TILES
+       ========================================================================= -->
+  <section class="curated-categories" id="categories">
+    <div class="section-container">
+      <div class="section-header-centered">
+        <span class="sub-title">CURATED ESSENTIALS</span>
+        <h2 class="section-title">The Seasonal Chapters</h2>
+        <p class="section-desc">Each piece is conceived as a future heirloom, uniting Casablanca’s sensual warmth with European tailoring.</p>
+      </div>
+
+      <div class="category-grid">
+        <!-- Tile 1: Molten Jewelry -->
+        <div class="category-card" data-category="jewelry">
+          <div class="cat-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" alt="Molten Gold Jewelry Collection" loading="lazy">
+            <div class="cat-overlay"></div>
+          </div>
+          <div class="cat-details">
+            <span class="cat-eyebrow">Signature Atelier</span>
+            <h3 class="cat-title">The Lava Jewelry Series</h3>
+            <p class="cat-copy">Fluid molten gold, sculptural hoops, and organic textures made to catch ambient light.</p>
+            <a href="#catalog" class="cat-link" data-filter="jewelry">
+              <span>Explore Jewelry</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tile 2: Silk Apparel -->
+        <div class="category-card" data-category="apparel">
+          <div class="cat-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Apparel & Fluid Silks" loading="lazy">
+            <div class="cat-overlay"></div>
+          </div>
+          <div class="cat-details">
+            <span class="cat-eyebrow">Prêt-à-Porter</span>
+            <h3 class="cat-title">Fluid Silks & Tailoring</h3>
+            <p class="cat-copy">Relaxed double-breasted linen blazers, pure silk slips, and cashmere knits.</p>
+            <a href="#catalog" class="cat-link" data-filter="apparel">
+              <span>Shop Apparel</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tile 3: Leather Bags -->
+        <div class="category-card" data-category="accessories">
+          <div class="cat-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" alt="Leather Goods & Handcrafted Bags" loading="lazy">
+            <div class="cat-overlay"></div>
+          </div>
+          <div class="cat-details">
+            <span class="cat-eyebrow">Leathercraft</span>
+            <h3 class="cat-title">Sculptural Handbags</h3>
+            <p class="cat-copy">Supple full-grain calf leather bags featuring geometric hardware and hand-stitched seams.</p>
+            <a href="#catalog" class="cat-link" data-filter="accessories">
+              <span>View Bags</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tile 4: Boots & Footwear -->
+        <div class="category-card" data-category="accessories">
+          <div class="cat-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80" alt="Artisanal Leather Boots & Footwear" loading="lazy">
+            <div class="cat-overlay"></div>
+          </div>
+          <div class="cat-details">
+            <span class="cat-eyebrow">Footwear</span>
+            <h3 class="cat-title">Artisanal Boots & Mules</h3>
+            <p class="cat-copy">Hand-buffed leather ankle boots and kitten-heel mules engineered for effortless posture.</p>
+            <a href="#catalog" class="cat-link" data-filter="accessories">
+              <span>Discover Footwear</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MAIN INTERACTIVE PRODUCT CATALOG
+       ========================================================================= -->
+  <section class="catalog-section" id="catalog">
+    <div class="section-container">
+      
+      <!-- Catalog Header & Controls -->
+      <div class="catalog-header">
+        <div class="catalog-header-text">
+          <span class="sub-title" id="new-in">CURATED SELECTION</span>
+          <h2 class="section-title">The Boutique Collection</h2>
+          <p class="section-desc">Hand-finished in limited batches. Filter by category, price, or sort to find your signature piece.</p>
+        </div>
+
+        <!-- Primary Filter Tabs Bar -->
+        <div class="catalog-filter-bar">
+          <div class="filter-tabs" role="tablist">
+            <button class="filter-tab active" data-filter="all" role="tab">All Pieces (<span id="countAll">16</span>)</button>
+            <button class="filter-tab" data-filter="jewelry" role="tab">Jewelry (<span id="countJewelry">6</span>)</button>
+            <button class="filter-tab" data-filter="apparel" role="tab">Apparel (<span id="countApparel">5</span>)</button>
+            <button class="filter-tab" data-filter="accessories" role="tab">Bags & Boots (<span id="countAccessories">5</span>)</button>
+            <button class="filter-tab" data-filter="bestseller" role="tab">Bestsellers</button>
+            <button class="filter-tab" data-filter="sale" role="tab">Curated Offers 🔥</button>
+          </div>
+
+          <!-- Secondary Controls: Search, Sort, Grid View -->
+          <div class="filter-controls-right">
+            <div class="catalog-inline-search">
+              <input type="text" id="catalogSearchInput" placeholder="Search piece, 18k, silk..." aria-label="Search within catalog">
+              <svg class="search-icon-sm" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+
+            <!-- Price Filter Dropdown -->
+            <div class="filter-dropdown-wrap">
+              <label for="catalogPriceSelect" class="sr-only">Filter by price</label>
+              <select id="catalogPriceSelect" aria-label="Filter by price">
+                <option value="all">All Prices</option>
+                <option value="under800">Under 800 MAD</option>
+                <option value="800to1500">800 – 1,500 MAD</option>
+                <option value="over1500">Over 1,500 MAD</option>
+              </select>
+            </div>
+
+            <!-- Sort Selector -->
+            <div class="sort-selector">
+              <label for="catalogSortSelect" class="sr-only">Sort products</label>
+              <select id="catalogSortSelect" aria-label="Sort products by">
+                <option value="featured">Featured / Curated</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Top Rated (★)</option>
+                <option value="newest">Newest Atelier Drops</option>
+              </select>
+            </div>
+
+            <!-- Grid Layout Switcher (4 cols vs 2 cols) -->
+            <div class="grid-view-switcher" role="group" aria-label="Catalog layout view">
+              <button class="view-btn active" id="btnViewGrid4" title="4-Column Grid View" aria-label="4-Column Grid View">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="2" y="2" width="4" height="20" rx="1"/>
+                  <rect x="8" y="2" width="4" height="20" rx="1"/>
+                  <rect x="14" y="2" width="4" height="20" rx="1"/>
+                  <rect x="20" y="2" width="4" height="20" rx="1"/>
+                </svg>
+              </button>
+              <button class="view-btn" id="btnViewGrid2" title="Editorial 2-Column Large View" aria-label="Editorial 2-Column Large View">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="3" y="2" width="8" height="20" rx="1.5"/>
+                  <rect x="13" y="2" width="8" height="20" rx="1.5"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filter Tags Row -->
+        <div class="active-filter-chips" id="activeFilterChips">
+          <!-- Dynamically populated if filters are active -->
+        </div>
+      </div>
+
+      <!-- Live Product Grid -->
+      <div class="product-grid cols-4" id="productGrid" aria-live="polite">
+        <!-- Injected dynamically via app.js -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="catalog-empty-state" id="catalogEmptyState" style="display: none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <h3>No matching pieces found</h3>
+        <p>Try refining your search keyword or clearing the selected filters.</p>
+        <button class="btn btn-outline" id="resetCatalogFiltersBtn">Reset All Filters</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE "SHOP THE LOOK" / MULTI-CHAPTER LOOKBOOK
+       ========================================================================= -->
+  <section class="lookbook-section" id="lookbook">
+    <div class="section-container">
+      <div class="section-header-centered">
+        <span class="sub-title">EDITORIAL STYLING</span>
+        <h2 class="section-title">Shop The Look: Casablanca Stories</h2>
+        <p class="section-desc">Explore curated capsule outfits styled by our Casablanca atelier. Click on glowing pins to reveal the hand-finished pieces.</p>
+        
+        <!-- Lookbook Chapter Selector Tabs -->
+        <div class="lookbook-tabs" role="tablist">
+          <button class="lookbook-tab active" data-look-idx="0">Chapter 01: Casablanca Dusk</button>
+          <button class="lookbook-tab" data-look-idx="1">Chapter 02: Triangle d'Or Tailoring</button>
+          <button class="lookbook-tab" data-look-idx="2">Chapter 03: Atlantic Sunset</button>
+        </div>
+      </div>
+
+      <div class="lookbook-canvas" id="lookbookCanvas">
+        <!-- Media with Interactive Glowing Hotspots -->
+        <div class="lookbook-media" id="lookbookMediaWrapper">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=85" 
+               alt="Casablanca Dusk Style Ensemble" 
+               class="lookbook-img" 
+               id="lookbookMainImg">
+          
+          <div class="hotspots-container" id="lookbookHotspots">
+            <!-- Dynamically injected based on active chapter -->
+          </div>
+        </div>
+
+        <!-- Lookbook Sidebar with Outfit Pieces & Bundle Add -->
+        <div class="lookbook-sidebar" id="lookbookSidebar">
+          <div class="lookbook-quote" id="lookbookQuoteWrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--gold-primary)"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <blockquote id="lookbookQuoteText">"True luxury doesn’t shout. It announces itself through tactile richness, sculpted weight, and a quiet confidence that transcends seasons."</blockquote>
+            <cite id="lookbookQuoteCite">— Golden Blossom Style Director, Casablanca</cite>
+          </div>
+
+          <div class="lookbook-products-list">
+            <div class="lookbook-list-header">
+              <h4>Featured In This Outfit</h4>
+              <button class="btn btn-sm btn-primary" id="btnAddFullLookToCart" title="Add all outfit pieces to your bag">
+                Add Entire Outfit • Save 10%
+              </button>
+            </div>
+            
+            <div class="lookbook-items-wrap" id="lookbookItemsWrap">
+              <!-- Dynamically populated in app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SIGNATURE SPOTLIGHT: THE LAVA COLLECTION
+       ========================================================================= -->
+  <section class="spotlight-section">
+    <div class="spotlight-container">
+      <div class="spotlight-visual">
+        <div class="spotlight-img-frame">
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85" alt="The Molten Lava Jewelry Craftsmanship">
+          <div class="spotlight-badge">LOST-WAX CASTING</div>
+        </div>
+      </div>
+
+      <div class="spotlight-copy">
+        <span class="sub-title">ATELIER CRAFTSMANSHIP</span>
+        <h2 class="section-title">The Molten Gold Collection</h2>
+        <p class="lead-text">
+          Inspired by volcanic textures and liquid movement, our signature Lava Series is cast by hand to ensure no two pieces are ever identical.
+        </p>
+        <p class="body-text">
+          Each piece begins as sculpted organic wax in our Casablanca studio, before being transformed into 3-micron 18-karat gold vermeil over recycled 925 sterling silver. Water-resistant, hypoallergenic, and impervious to daily wear.
+        </p>
+
+        <div class="craft-specs">
+          <div class="craft-spec">
+            <span class="spec-value">3.0 μm</span>
+            <span class="spec-desc">Heavy Gold Vermeil Layer</span>
+          </div>
+          <div class="craft-spec">
+            <span class="spec-value">100%</span>
+            <span class="spec-desc">Certified Recycled Silver</span>
+          </div>
+          <div class="craft-spec">
+            <span class="spec-value">0%</span>
+            <span class="spec-desc">Nickel or Lead Irritants</span>
+          </div>
+        </div>
+
+        <div class="spotlight-actions">
+          <a href="#catalog" class="btn btn-primary" data-filter="jewelry">Shop The Lava Series</a>
+          <button class="btn btn-outline" id="btnOpenCareGuide">Jewelry Care Guide</button>
+          <button class="btn btn-outline" id="btnOpenSpotlightSizeGuide">Ring Sizing Chart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT & BRAND ESSENCE ("NOT MADE TO IMPRESS. MADE TO BELONG.")
+       ========================================================================= -->
+  <section class="brand-story-section" id="brand-story">
+    <div class="section-container">
+      <div class="story-grid">
+        <div class="story-content">
+          <span class="sub-title">CASABLANCA ROOTS</span>
+          <h2 class="section-title">Not made to impress.<br><em>Made to belong.</em></h2>
+          <div class="story-paragraphs">
+            <p>
+              Golden Blossom was born in Casablanca from an unwavering conviction: genuine luxury does not demand attention through ostentatious logos or fleeting micro-trends. It speaks softly through tactile materials, immaculate drape, and gold that warms against bare skin.
+            </p>
+            <p>
+              From our flagship studio in Casablanca's vibrant Triangle d'Or to clientele across Morocco, Paris, and London, our collections embody a modern North African cosmopolitan grace—sun-drenched, sophisticated, and deeply grounded.
+            </p>
+          </div>
+
+          <div class="founder-signoff">
+            <div class="signature">Golden Blossom Atelier</div>
+            <div class="founder-role">Casablanca, Morocco</div>
+          </div>
+        </div>
+
+        <div class="story-gallery">
+          <div class="gallery-col col-1">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Atelier Lookbook" class="story-img-1" loading="lazy">
+          </div>
+          <div class="gallery-col col-2">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80" alt="Casablanca Sunlight & Gold" class="story-img-2" loading="lazy">
+            <div class="story-quote-card">
+              <span class="quote-number">10,000+</span>
+              <span class="quote-text">Discerning Women Adorned with Everyday Elegance Across Morocco</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VERIFIED CLIENT TESTIMONIALS
+       ========================================================================= -->
+  <section class="testimonials-section">
+    <div class="section-container">
+      <div class="section-header-centered">
+        <div class="stars-row">★★★★★</div>
+        <span class="sub-title">CLIENT LOVE</span>
+        <h2 class="section-title">Endorsed by Discerning Women</h2>
+        <p class="section-desc">Rated 4.9/5 by over 1,200 verified boutique patrons across Morocco and worldwide.</p>
+      </div>
+
+      <div class="testimonial-slider-wrapper">
+        <div class="testimonials-track" id="testimonialTrack">
+          
+          <div class="testimonial-card">
+            <div class="card-stars">★★★★★</div>
+            <p class="quote">"The Molten Lava Hoops are hands down the most complemented jewelry I own. Heavy, rich, and truly water resistant. Delivery in Casablanca took less than 24 hours!"</p>
+            <div class="client-meta">
+              <span class="client-name">Kenza B.</span>
+              <span class="client-location">Casablanca, Gauthier • Verified Buyer</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="card-stars">★★★★★</div>
+            <p class="quote">"The champagne silk slip dress hangs like pure liquid. You can immediately feel the quality of the fabric and the precision of the stitching. Golden Blossom is a Moroccan gem."</p>
+            <div class="client-meta">
+              <span class="client-name">Nour E.</span>
+              <span class="client-location">Rabat, Souissi • Verified Buyer</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="card-stars">★★★★★</div>
+            <p class="quote">"Ordered via WhatsApp concierge for my sister's birthday. The packaging with the velvet pouch and custom wax seal was exquisite. Exceptional service!"</p>
+            <div class="client-meta">
+              <span class="client-name">Soraya M.</span>
+              <span class="client-location">Marrakech, Guéliz • Verified Buyer</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="card-stars">★★★★★</div>
+            <p class="quote">"I was skeptical about vermeil jewelry, but after swimming with the signet ring in Taghazout all summer, the gold finish is still as radiant as day one."</p>
+            <div class="client-meta">
+              <span class="client-name">Camille L.</span>
+              <span class="client-location">Paris & Casablanca • Verified Buyer</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INSTAGRAM EDITORIAL GALLERY (@goldenblossom_boutique)
+       ========================================================================= -->
+  <section class="instagram-section">
+    <div class="section-container">
+      <div class="instagram-header">
+        <div class="ig-text">
+          <span class="sub-title">FOLLOW OUR JOURNEY</span>
+          <h2 class="section-title">@goldenblossom_boutique</h2>
+          <p class="section-desc">Join our community for daily styling inspiration, atelier previews, and private VIP drops.</p>
+        </div>
+        <a href="https://www.instagram.com/goldenblossom_boutique/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          <span>Follow On Instagram</span>
+        </a>
+      </div>
+
+      <div class="instagram-grid">
+        <a href="https://www.instagram.com/goldenblossom_boutique/" target="_blank" rel="noopener noreferrer" class="ig-tile">
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=500&q=80" alt="Instagram Post 1" loading="lazy">
+          <div class="ig-overlay">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>@goldenblossom_boutique</span>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/goldenblossom_boutique/" target="_blank" rel="noopener noreferrer" class="ig-tile">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=500&q=80" alt="Instagram Post 2" loading="lazy">
+          <div class="ig-overlay">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>Quiet luxury moments</span>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/goldenblossom_boutique/" target="_blank" rel="noopener noreferrer" class="ig-tile">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=500&q=80" alt="Instagram Post 3" loading="lazy">
+          <div class="ig-overlay">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>The Molten Drop</span>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/goldenblossom_boutique/" target="_blank" rel="noopener noreferrer" class="ig-tile">
+          <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=500&q=80" alt="Instagram Post 4" loading="lazy">
+          <div class="ig-overlay">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>Italian calf leathercraft</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FREQUENTLY ASKED QUESTIONS & MOROCCO SHIPPING
+       ========================================================================= -->
+  <section class="faq-section" id="contact-faq">
+    <div class="section-container">
+      <div class="section-header-centered">
+        <span class="sub-title">CLIENT CARE & CONCIERGE</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Everything you need to know about delivery across Morocco, payment options, and care.</p>
+      </div>
+
+      <div class="faq-accordion-list">
+        
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span>What are the delivery times and shipping fees in Morocco?</span>
+            <span class="faq-chevron"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>We provide nationwide express delivery across Morocco:</p>
+            <ul>
+              <li><strong>Casablanca & Mohammedia:</strong> Same-day or 24h express hand delivery.</li>
+              <li><strong>Rabat, Marrakech, Tangier, Agadir, Fes & other cities:</strong> 24 to 48 hours via premium courier (Amana / Aramex).</li>
+              <li><strong>Shipping Fee:</strong> Free on all orders over 500 MAD (or 35 MAD flat rate for smaller orders).</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Do you offer Cash on Delivery (Paiement à la livraison)?</span>
+            <span class="faq-chevron"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes! We offer <strong>Cash on Delivery (Paiement à la livraison)</strong> everywhere in Morocco. You can inspect your luxury gift packaging upon receipt and pay the courier directly in cash. We also accept secure online payments via Credit Card, CMI, and Apple Pay.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Is Golden Blossom jewelry genuine gold and water-resistant?</span>
+            <span class="faq-chevron"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>All our jewelry pieces are crafted with <strong>3-micron 18K heavy gold vermeil</strong> over recycled 925 sterling silver, which is over 5 times thicker than standard flash plating. They are 100% nickel-free, hypoallergenic, and water-resistant for everyday wear.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How do I find my exact ring or dress size?</span>
+            <span class="faq-chevron"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>You can check our interactive <button type="button" class="inline-link-btn" id="faqSizeGuideTrigger">Ring & Apparel Sizing Guide</button> or WhatsApp our Casablanca stylist who will gladly measure or advise you live with photo assistance.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Can I order directly or customize via WhatsApp?</span>
+            <span class="faq-chevron"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Absolutely. You can click our WhatsApp concierge button or message us directly at <a href="https://wa.me/212780760188" target="_blank" rel="noopener noreferrer" style="color: var(--gold-primary); font-weight: 600; text-decoration: underline;">+212 780-760188</a> at any time to place your order with a live styling advisor, request personalized gift messages, or get exact size recommendations for rings and dresses.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What is your exchange and return policy?</span>
+            <span class="faq-chevron"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>We gladly offer 7-day hassle-free exchanges across Morocco. If a ring size or apparel fit isn't perfect, our courier will deliver the replacement right to your doorstep and collect the original item.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VIP NEWSLETTER / "THE GOLDEN CIRCLE"
+       ========================================================================= -->
+  <section class="newsletter-section">
+    <div class="newsletter-card">
+      <div class="newsletter-decor">
+        <svg width="60" height="60" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="19" stroke="var(--gold-primary)" stroke-width="1" stroke-dasharray="3 3"/>
+          <path d="M20 7C22 13 25 17 31 17C25 19 22 23 20 33C18 23 15 19 9 17C15 17 18 13 20 7Z" fill="var(--gold-primary)" opacity="0.6"/>
+        </svg>
+      </div>
+
+      <span class="sub-title">PRIVATE ACCESS</span>
+      <h2 class="section-title">Join The Golden Circle</h2>
+      <p class="section-desc">Receive 10% off your first order, private invites to limited 18K drops, and curated editorial edits.</p>
+
+      <form class="newsletter-form" id="newsletterForm">
+        <div class="newsletter-input-group">
+          <input type="email" id="newsletterEmailInput" placeholder="Enter your email address..." required aria-label="Email address for newsletter">
+          <button type="submit" class="btn btn-primary">
+            <span>Subscribe</span>
+          </button>
+        </div>
+        <div class="newsletter-confirmation" id="newsletterSuccess" style="display:none;">
+          ✨ Welcome! Use promo code <strong>GOLDEN10</strong> at checkout for 10% off.
+        </div>
+      </form>
+
+      <span class="newsletter-note">We respect your privacy. Unsubscribe at any time with one click.</span>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <span class="logo-title">GOLDEN BLOSSOM</span>
+          <span class="logo-subtitle">BOUTIQUE • CASABLANCA</span>
+        </div>
+        <p class="brand-motto">
+          "Not made to impress. Made to belong." Curating quiet luxury, molten gold jewelry, and refined wardrobe foundations for the modern woman.
+        </p>
+
+        <div class="footer-contacts">
+          <a href="mailto:hello@goldenblossomboutique.com">hello@goldenblossomboutique.com</a>
+          <span>Casablanca, Morocco • Delivery Nationwide</span>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/goldenblossom_boutique/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://wa.me/212780760188" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Concierge (+212 780-760188)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.533 1.942.825 3.149.825l.001-.001c3.182 0 5.768-2.586 5.768-5.766 0-3.18-2.586-5.766-5.769-5.766zm0-2.172c4.418 0 8 3.582 8 8 0 1.545-.44 2.99-1.203 4.22l1.172 4.28-4.38-1.15c-1.19.71-2.57 1.13-4.047 1.13-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.11V9.32a6.34 6.34 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 0 0 0 6.34 6.34c3.5 0 6.34-2.84 6.34-6.34V8.47a8.28 8.28 0 0 0 4.77 1.48V6.69h-.1z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Collections</h4>
+        <ul class="footer-nav">
+          <li><a href="#catalog" data-filter="jewelry">The Molten Lava Jewelry</a></li>
+          <li><a href="#catalog" data-filter="jewelry">18K Sculptural Hoops</a></li>
+          <li><a href="#catalog" data-filter="apparel">Mulberry Silk Slip Dresses</a></li>
+          <li><a href="#catalog" data-filter="apparel">Tailored Linen Blazers</a></li>
+          <li><a href="#catalog" data-filter="accessories">Artisan Leather Handbags</a></li>
+          <li><a href="#catalog" data-filter="accessories">Handcrafted Leather Boots</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Client Care</h4>
+        <ul class="footer-nav">
+          <li><a href="#contact-faq">Livraison au Maroc & Tracking</a></li>
+          <li><a href="#contact-faq">Paiement à la Livraison (COD)</a></li>
+          <li><button type="button" class="footer-link-btn" id="footerOpenSizeGuideBtn">Ring & Apparel Sizing Guide</button></li>
+          <li><a href="#contact-faq">Jewelry Care & Warranty</a></li>
+          <li><a href="#contact-faq">Hassle-Free 7-Day Exchange</a></li>
+          <li><a href="https://wa.me/212780760188" target="_blank" rel="noopener noreferrer">WhatsApp: +212 780-760188</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Boutique & Atelier</h4>
+        <div class="atelier-info">
+          <p><strong>Golden Blossom Studio</strong></p>
+          <p>Boulevard d'Anfa, Triangle d'Or</p>
+          <p>Casablanca, Morocco</p>
+          <p class="phone" style="margin-top: 6px;">WhatsApp: <a href="https://wa.me/212780760188" target="_blank" rel="noopener noreferrer" style="color: var(--gold-primary); text-decoration: underline; font-weight: 600;">+212 780-760188</a></p>
+          <p class="hours">Mon – Sat: 10:30 – 19:30</p>
+        </div>
+
+        <div class="payment-methods">
+          <span class="payment-badge">Cash on Delivery</span>
+          <span class="payment-badge">CMI / Visa</span>
+          <span class="payment-badge">Mastercard</span>
+          <span class="payment-badge">Apple Pay</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>&copy; 2026 Golden Blossom Boutique. All rights reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span>•</span>
+          <a href="#">Terms of Service</a>
+          <span>•</span>
+          <a href="#">Shipping Policy Maroc</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       SLIDE-OUT SHOPPING BAG DRAWER
+       ========================================================================= -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag">
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrap">
+        <h3>Shopping Bag</h3>
+        <span class="cart-count-pill" id="cartDrawerCount">0 items</span>
+      </div>
+      <button class="close-drawer-btn" id="closeCartBtn" aria-label="Close shopping bag">&times;</button>
+    </div>
+
+    <!-- Free Shipping Progress Indicator -->
+    <div class="free-shipping-bar-box">
+      <div class="free-shipping-text" id="freeShippingText">
+        Add <span>500 MAD</span> more for <strong>FREE EXPRESS SHIPPING</strong> in Morocco!
+      </div>
+      <div class="shipping-progress-track">
+        <div class="shipping-progress-fill" id="shippingProgressFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Container -->
+    <div class="cart-items-scroll" id="cartItemsList">
+      <!-- Injected dynamically via app.js -->
+    </div>
+
+    <!-- Empty Cart State -->
+    <div class="cart-empty-state" id="cartEmptyState" style="display: none;">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+      <h4>Your shopping bag is empty</h4>
+      <p>Discover our curated molten gold pieces and seasonal drops.</p>
+      <button class="btn btn-primary" id="btnContinueShopping">Start Shopping</button>
+    </div>
+
+    <!-- Cross-Sell / "Complete Your Look" in Cart -->
+    <div class="cart-cross-sell" id="cartCrossSell" style="display: none;">
+      <h5 class="cross-sell-title">Complete Your Set</h5>
+      <div class="cross-sell-items" id="cartCrossSellItems">
+        <!-- Injected dynamically in app.js -->
+      </div>
+    </div>
+
+    <!-- Cart Footer & Checkout Action -->
+    <div class="cart-drawer-footer" id="cartFooter">
+      
+      <!-- Promo Code Box -->
+      <div class="cart-promo-box">
+        <div class="promo-input-row">
+          <input type="text" id="cartCouponInput" placeholder="Promo code (e.g. GOLDEN10)" aria-label="Discount coupon">
+          <button type="button" id="btnApplyCoupon" class="btn btn-sm btn-outline">Apply</button>
+        </div>
+        <div class="applied-coupon-tag" id="appliedCouponTag" style="display: none;">
+          <span>Applied: <strong id="appliedCouponName">GOLDEN10</strong> (-10%)</span>
+          <button type="button" id="btnRemoveCoupon" aria-label="Remove coupon">&times;</button>
+        </div>
+      </div>
+
+      <!-- Gift Wrapping Option -->
+      <div class="cart-gift-option">
+        <label class="custom-checkbox">
+          <input type="checkbox" id="giftWrapCheckbox">
+          <span class="checkmark"></span>
+          <span>Complimentary Signature Gift Box & Velvet Pouch</span>
+        </label>
+
+        <!-- Personal Gift Inscription / Note Input -->
+        <details class="cart-gift-note-details">
+          <summary class="gift-note-summary">💌 Add a personal gift card note for the recipient</summary>
+          <div class="gift-note-body">
+            <textarea id="cartGiftNoteInput" placeholder="Write your heartfelt message here... Our calligraphy team will hand-inscribe it onto custom embossed stationery." rows="2"></textarea>
+          </div>
+        </details>
+      </div>
+
+      <!-- Subtotal Calculation -->
+      <div class="cart-summary-lines">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">0 MAD</span>
+        </div>
+        <div class="summary-line discount" id="cartDiscountRow" style="display: none;">
+          <span>Promo Discount</span>
+          <span id="cartDiscountAmount">-0 MAD</span>
+        </div>
+        <div class="summary-line">
+          <span>Delivery in Morocco</span>
+          <span id="cartShippingCost">FREE</span>
+        </div>
+        <div class="summary-line total">
+          <strong>Estimated Total</strong>
+          <strong id="cartGrandTotal">0 MAD</strong>
+        </div>
+      </div>
+
+      <!-- Checkout Action Buttons -->
+      <div class="cart-actions-column">
+        <button class="btn btn-primary btn-block" id="btnProceedCheckout">
+          <span>Secure Checkout</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <!-- Order Directly via WhatsApp -->
+        <button class="btn btn-whatsapp btn-block" id="btnOrderViaWhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.533 1.942.825 3.149.825l.001-.001c3.182 0 5.768-2.586 5.768-5.766 0-3.18-2.586-5.766-5.769-5.766zm0-2.172c4.418 0 8 3.582 8 8 0 1.545-.44 2.99-1.203 4.22l1.172 4.28-4.38-1.15c-1.19.71-2.57 1.13-4.047 1.13-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/></svg>
+          <span>Order via WhatsApp (Instant VIP)</span>
+        </button>
+      </div>
+
+      <p class="cart-guarantee">🔒 100% Encrypted Checkout • Cash on Delivery Available in Morocco</p>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       WISHLIST DRAWER
+       ========================================================================= -->
+  <div class="wishlist-overlay" id="wishlistOverlay"></div>
+  <aside class="wishlist-drawer" id="wishlistDrawer" aria-label="Saved favorites">
+    <div class="wishlist-header">
+      <div class="wishlist-title-wrap">
+        <h3>Saved Pieces</h3>
+        <span class="wishlist-count-pill" id="wishlistDrawerCount">0 saved</span>
+      </div>
+      <button class="close-drawer-btn" id="closeWishlistBtn" aria-label="Close wishlist">&times;</button>
+    </div>
+
+    <div class="wishlist-items-scroll" id="wishlistItemsList">
+      <!-- Injected dynamically via app.js -->
+    </div>
+
+    <div class="wishlist-empty-state" id="wishlistEmptyState" style="display: none;">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <h4>Your wishlist is empty</h4>
+      <p>Click the heart icon on any piece to save it for later.</p>
+    </div>
+
+    <div class="wishlist-drawer-footer" id="wishlistFooter">
+      <button class="btn btn-primary btn-block" id="btnMoveAllToCart">Move All To Bag</button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       QUICK VIEW PRODUCT MODAL (WITH MULTI-IMAGE GALLERY & TABS)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="quickViewBackdrop"></div>
+  <div class="quick-view-modal" id="quickViewModal" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+    <button class="close-modal-btn" id="closeQuickViewBtn" aria-label="Close product preview">&times;</button>
+    <div class="quick-view-body" id="quickViewContent">
+      <!-- Injected dynamically via app.js with rich multi-photo gallery & specs tabs -->
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       INTERACTIVE SIZE GUIDE MODAL (RINGS, APPAREL, FOOTWEAR)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="sizeGuideBackdrop"></div>
+  <div class="size-guide-modal" id="sizeGuideModal" role="dialog" aria-modal="true" aria-labelledby="sizeGuideHeading">
+    <button class="close-modal-btn" id="closeSizeGuideBtn" aria-label="Close size guide">&times;</button>
+    <div class="size-guide-content">
+      <span class="sub-title">ATELIER SIZING & FIT</span>
+      <h3 class="size-guide-title" id="sizeGuideHeading">Comprehensive Sizing Guide</h3>
+      <p class="size-guide-subtitle">Handcrafted in Casablanca according to French haute-couture and Mediterranean jewel standards.</p>
+
+      <!-- Sizing Guide Tabs -->
+      <div class="size-guide-tabs" role="tablist">
+        <button class="size-guide-tab active" data-tab-target="tabRings">💍 Rings & Bands</button>
+        <button class="size-guide-tab" data-tab-target="tabApparel">👗 Silks & Apparel</button>
+        <button class="size-guide-tab" data-tab-target="tabShoes">👠 Boots & Mules</button>
+      </div>
+
+      <!-- Tab Content: Rings -->
+      <div class="size-tab-pane active" id="tabRings">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>EU Size (Standard)</th>
+              <th>US Size</th>
+              <th>UK Size</th>
+              <th>Inside Diameter (mm)</th>
+              <th>Circumference (mm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>EU 50</strong></td><td>US 5.25</td><td>K</td><td>15.9 mm</td><td>50.0 mm</td></tr>
+            <tr><td><strong>EU 52</strong></td><td>US 6.0</td><td>L 1/2</td><td>16.5 mm</td><td>52.0 mm</td></tr>
+            <tr><td><strong>EU 54</strong></td><td>US 7.0</td><td>N 1/2</td><td>17.2 mm</td><td>54.0 mm</td></tr>
+            <tr><td><strong>EU 56</strong></td><td>US 7.75</td><td>P 1/2</td><td>17.8 mm</td><td>56.0 mm</td></tr>
+            <tr><td><strong>EU 58</strong></td><td>US 8.5</td><td>R</td><td>18.5 mm</td><td>58.0 mm</td></tr>
+          </tbody>
+        </table>
+        <div class="size-tip-box">
+          <strong>💡 Atelier Sizing Tip:</strong> If your knuckle is significantly larger than your finger base, choose one size up. Our Signet and Dome rings have a comfort-fit interior.
+        </div>
+      </div>
+
+      <!-- Tab Content: Apparel -->
+      <div class="size-tab-pane" id="tabApparel">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>French Size</th>
+              <th>Bust (cm)</th>
+              <th>Waist (cm)</th>
+              <th>Hips (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>XS</strong></td><td>FR 34</td><td>80 - 84 cm</td><td>62 - 66 cm</td><td>88 - 92 cm</td></tr>
+            <tr><td><strong>S</strong></td><td>FR 36</td><td>84 - 88 cm</td><td>66 - 70 cm</td><td>92 - 96 cm</td></tr>
+            <tr><td><strong>M</strong></td><td>FR 38</td><td>88 - 94 cm</td><td>70 - 76 cm</td><td>96 - 102 cm</td></tr>
+            <tr><td><strong>L</strong></td><td>FR 40</td><td>94 - 100 cm</td><td>76 - 82 cm</td><td>102 - 108 cm</td></tr>
+          </tbody>
+        </table>
+        <div class="size-tip-box">
+          <strong>💡 Silk Drape Note:</strong> Our slip dresses are cut on the true bias, which naturally conforms and stretches gently across contours. For a looser lounge look, order one size larger.
+        </div>
+      </div>
+
+      <!-- Tab Content: Shoes -->
+      <div class="size-tab-pane" id="tabShoes">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>EU Size</th>
+              <th>UK Size</th>
+              <th>US Size</th>
+              <th>Foot Length (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>EU 36</strong></td><td>3.5</td><td>5.5</td><td>23.0 cm</td></tr>
+            <tr><td><strong>EU 37</strong></td><td>4.5</td><td>6.5</td><td>23.7 cm</td></tr>
+            <tr><td><strong>EU 38</strong></td><td>5.0</td><td>7.0</td><td>24.4 cm</td></tr>
+            <tr><td><strong>EU 39</strong></td><td>6.0</td><td>8.0</td><td>25.0 cm</td></tr>
+            <tr><td><strong>EU 40</strong></td><td>6.5</td><td>8.5</td><td>25.7 cm</td></tr>
+            <tr><td><strong>EU 41</strong></td><td>7.5</td><td>9.5</td><td>26.4 cm</td></tr>
+          </tbody>
+        </table>
+        <div class="size-tip-box">
+          <strong>💡 Handcrafted Footwear:</strong> Our Blake-stitched calfskin boots fit true to size. Free size exchange across Morocco if fit requires adjustment!
+        </div>
+      </div>
+
+      <div class="size-guide-footer">
+        <button class="btn btn-outline" id="btnCloseSizeGuideModal">Close Sizing Guide</button>
+        <a href="https://wa.me/212780760188?text=Hello%20Golden%20Blossom,%20I%20would%20like%20sizing%20advice%20for%20an%20order" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-whatsapp">
+          <span>Ask Stylist On WhatsApp (+212 780-760188)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SEARCH OVERLAY MODAL
+       ========================================================================= -->
+  <div class="search-modal-overlay" id="searchModalOverlay">
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <div class="search-input-wrapper">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="liveSearchInput" placeholder="Search piece, 18k gold, silk, boots, ring..." autocomplete="off">
+          <button type="button" class="clear-search-btn" id="clearSearchBtn">&times;</button>
+        </div>
+        <button type="button" class="close-search-btn" id="closeSearchModalBtn">Cancel</button>
+      </div>
+
+      <div class="search-suggestions-section">
+        <span class="suggest-label">Trending Searches:</span>
+        <button class="search-tag" data-search-term="Lava">Lava Ring</button>
+        <button class="search-tag" data-search-term="Hoops">Molten Hoops</button>
+        <button class="search-tag" data-search-term="Silk">Silk Dress</button>
+        <button class="search-tag" data-search-term="Leather">Calfskin Bag</button>
+        <button class="search-tag" data-search-term="Boots">Leather Boots</button>
+        <button class="search-tag" data-search-term="Pearl">Baroque Pearl</button>
+      </div>
+
+      <div class="search-results-container" id="searchResultsContainer">
+        <!-- Injected dynamically in app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       INTERACTIVE CHECKOUT MODAL & ORDER CONFIRMATION
+       ========================================================================= -->
+  <div class="checkout-modal-overlay" id="checkoutModalOverlay">
+    <div class="checkout-modal">
+      <button class="close-modal-btn" id="closeCheckoutBtn" aria-label="Close checkout">&times;</button>
+      
+      <!-- Checkout Wizard Content -->
+      <div class="checkout-wizard" id="checkoutWizard">
+        <div class="checkout-header">
+          <div class="checkout-logo">GOLDEN BLOSSOM BOUTIQUE</div>
+          <div class="checkout-steps">
+            <span class="step-indicator active" id="stepIndicator1">1. Delivery</span>
+            <span class="step-separator">›</span>
+            <span class="step-indicator" id="stepIndicator2">2. Payment & Recap</span>
+            <span class="step-separator">›</span>
+            <span class="step-indicator" id="stepIndicator3">3. Confirmation</span>
+          </div>
+        </div>
+
+        <form id="checkoutForm">
+          <!-- Step 1: Shipping Address -->
+          <div class="checkout-step-page active" id="checkoutStep1">
+            <h3 class="step-heading">Delivery Address (Livraison au Maroc)</h3>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkoutFirstName">First Name *</label>
+                <input type="text" id="checkoutFirstName" required placeholder="e.g. Kenza">
+              </div>
+              <div class="form-group">
+                <label for="checkoutLastName">Last Name *</label>
+                <input type="text" id="checkoutLastName" required placeholder="e.g. Bennani">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkoutPhone">Phone / WhatsApp * (for courier dispatch)</label>
+                <input type="tel" id="checkoutPhone" required placeholder="+212 6 XX XX XX XX">
+              </div>
+              <div class="form-group">
+                <label for="checkoutEmail">Email Address *</label>
+                <input type="email" id="checkoutEmail" required placeholder="name@example.com">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="checkoutAddress">Street Address / Quartier *</label>
+              <input type="text" id="checkoutAddress" required placeholder="e.g. Boulevard d'Anfa, Résidence Al Manar, Apt 12">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkoutCity">City in Morocco *</label>
+                <select id="checkoutCity" required>
+                  <option value="Casablanca" selected>Casablanca (Same-day / 24h Express)</option>
+                  <option value="Rabat">Rabat (24h Express Courier)</option>
+                  <option value="Marrakech">Marrakech (24h - 48h Courier)</option>
+                  <option value="Tangier">Tangier (24h - 48h Courier)</option>
+                  <option value="Agadir">Agadir (24h - 48h Courier)</option>
+                  <option value="Fes">Fes (24h - 48h Courier)</option>
+                  <option value="Meknes">Meknes (24h - 48h Courier)</option>
+                  <option value="Oujda">Oujda (48h Courier)</option>
+                  <option value="El Jadida">El Jadida (24h Courier)</option>
+                  <option value="International">International Express (DHL / FedEx)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="checkoutNotes">Special Delivery Instructions</label>
+                <input type="text" id="checkoutNotes" placeholder="e.g. Call before arrival, gate code 1234">
+              </div>
+            </div>
+
+            <div class="step-nav-buttons">
+              <button type="button" class="btn btn-outline" id="btnCancelCheckout">Back to Bag</button>
+              <button type="button" class="btn btn-primary" id="btnGoToStep2">Continue to Payment ›</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Payment Method & Order Review -->
+          <div class="checkout-step-page" id="checkoutStep2" style="display: none;">
+            <h3 class="step-heading">Select Payment Option (Mode de Règlement)</h3>
+
+            <!-- 4 Payment Method Radio Choices -->
+            <div class="payment-options-grid">
+              
+              <!-- 1. Visa & Credit Card -->
+              <label class="payment-method-card active" id="labelMethodCard">
+                <input type="radio" name="paymentMethod" value="card" checked>
+                <div class="method-header-line">
+                  <div class="method-badge-group">
+                    <span class="card-icon visa-icon">VISA</span>
+                    <span class="card-icon mc-icon">Mastercard</span>
+                    <span class="card-icon cmi-icon">CMI</span>
+                  </div>
+                  <strong class="method-title">Credit / Debit Card</strong>
+                </div>
+                <p class="method-desc">Instant 3D-Secure 256-bit encrypted Visa & Mastercard checkout.</p>
+              </label>
+
+              <!-- 2. Apple Pay -->
+              <label class="payment-method-card" id="labelMethodApple">
+                <input type="radio" name="paymentMethod" value="applepay">
+                <div class="method-header-line">
+                  <span class="brand-pill apple-pill">
+                    <svg width="14" height="14" viewBox="0 0 170 170" fill="currentColor"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.08-7.58-7.85-11.66-14.3-5.74-9.08-10.15-19.3-13.23-30.65-3.08-11.35-4.62-22.37-4.62-33.06 0-14.39 3.58-26.31 10.74-35.76 7.16-9.45 16.3-14.28 27.42-14.5 4.89 0 10.37 1.25 16.45 3.75 6.08 2.5 10.1 3.82 12.06 3.96 1.74-.14 5.86-1.5 12.37-4.08 6.51-2.58 11.96-3.79 16.34-3.63 11.21.57 20.35 4.67 27.42 12.3-9.8 5.9-14.6 14.28-14.4 25.13.2 10.14 4.13 18.35 11.79 24.63 3.69 3.08 7.9 5.37 12.63 6.87-2.61 7.64-5.73 15.22-9.36 22.75zM119.22 31.85c0-6.9 2.47-13.43 7.41-19.6 4.94-6.17 11.19-10.38 18.75-12.64-.13 1.07-.2 2.05-.2 2.94 0 6.64-2.58 13.16-7.74 19.56-5.16 6.4-11.35 10.39-18.57 11.97-.27-.74-.4-1.48-.4-2.23z"/></svg>
+                    Pay
+                  </span>
+                  <strong class="method-title">Apple Pay</strong>
+                </div>
+                <p class="method-desc">1-touch Touch ID / Face ID payment on iOS & Mac.</p>
+              </label>
+
+              <!-- 3. Google Pay -->
+              <label class="payment-method-card" id="labelMethodGoogle">
+                <input type="radio" name="paymentMethod" value="googlepay">
+                <div class="method-header-line">
+                  <span class="brand-pill google-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.27 21.39 7.35 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.27 2.61 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+                    Pay
+                  </span>
+                  <strong class="method-title">Google Pay</strong>
+                </div>
+                <p class="method-desc">Fast, encrypted checkout via saved Google cards.</p>
+              </label>
+
+              <!-- 4. Cash on Delivery -->
+              <label class="payment-method-card" id="labelMethodCod">
+                <input type="radio" name="paymentMethod" value="cod">
+                <div class="method-header-line">
+                  <span class="brand-pill cod-pill">💵 COD</span>
+                  <strong class="method-title">Cash on Delivery</strong>
+                </div>
+                <p class="method-desc">Pay cash to courier upon package inspection.</p>
+              </label>
+
+            </div>
+
+            <!-- SUB-PANEL: Credit / Debit Card Details -->
+            <div class="payment-subpanel active" id="panelCardDetails">
+              
+              <!-- Luxury Visual Credit Card Preview -->
+              <div class="luxury-credit-card" id="visualCreditCard">
+                <div class="card-bg-mesh"></div>
+                <div class="card-chip">
+                  <div class="chip-line"></div>
+                  <div class="chip-line"></div>
+                </div>
+                <div class="card-brand-logo" id="cardBrandLogo">VISA</div>
+                <div class="card-number-display" id="cardDisplayNumber">•••• •••• •••• ••••</div>
+                <div class="card-footer-info">
+                  <div class="card-holder-group">
+                    <span class="card-label">CARDHOLDER</span>
+                    <span class="card-val" id="cardDisplayName">KENZA BENNANI</span>
+                  </div>
+                  <div class="card-expiry-group">
+                    <span class="card-label">EXPIRES</span>
+                    <span class="card-val" id="cardDisplayExpiry">12 / 28</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card Input Form Fields -->
+              <div class="card-fields-grid">
+                <div class="form-group full-width">
+                  <label for="cardNumberInput">Card Number (Numéro de Carte Visa / Mastercard) *</label>
+                  <div class="card-input-wrapper">
+                    <input type="text" id="cardNumberInput" placeholder="4532 •••• •••• ••••" maxlength="19" autocomplete="cc-number">
+                    <span class="input-card-indicator" id="inputCardIndicator">💳</span>
+                  </div>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="cardHolderInput">Cardholder Name (Nom sur la Carte) *</label>
+                  <input type="text" id="cardHolderInput" placeholder="e.g. KENZA BENNANI" autocomplete="cc-name" style="text-transform: uppercase;">
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="cardExpiryInput">Expiry Date (MM / YY) *</label>
+                    <input type="text" id="cardExpiryInput" placeholder="MM / YY" maxlength="7" autocomplete="cc-exp">
+                  </div>
+                  <div class="form-group">
+                    <label for="cardCvvInput">CVV / CVC *</label>
+                    <div class="cvv-wrapper">
+                      <input type="password" id="cardCvvInput" placeholder="•••" maxlength="4" autocomplete="cc-csc">
+                      <span class="cvv-tooltip-icon" title="3-digit security code on the back of your card">ℹ️</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-save-toggle">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" id="saveCardTokenCheckbox" checked>
+                    <span class="checkmark"></span>
+                    <span style="font-size: 0.8125rem;">Save encrypted card token securely for future boutique purchases</span>
+                  </label>
+                </div>
+
+                <div class="card-security-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>256-Bit SSL Encrypted • Verified by Visa & Mastercard Identity Check (CMI Maroc)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SUB-PANEL: Apple Pay Panel -->
+            <div class="payment-subpanel" id="panelApplePay" style="display: none;">
+              <div class="digital-wallet-box apple-box">
+                <div class="wallet-icon-large"></div>
+                <h4>Apple Pay Express Checkout</h4>
+                <p>Authorize securely using Face ID or Touch ID linked to your Apple Wallet. Your card numbers are never shared with merchants.</p>
+                <button type="button" class="btn btn-apple-pay" id="btnApplePayTrigger">
+                  <svg width="18" height="18" viewBox="0 0 170 170" fill="currentColor"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.08-7.58-7.85-11.66-14.3-5.74-9.08-10.15-19.3-13.23-30.65-3.08-11.35-4.62-22.37-4.62-33.06 0-14.39 3.58-26.31 10.74-35.76 7.16-9.45 16.3-14.28 27.42-14.5 4.89 0 10.37 1.25 16.45 3.75 6.08 2.5 10.1 3.82 12.06 3.96 1.74-.14 5.86-1.5 12.37-4.08 6.51-2.58 11.96-3.79 16.34-3.63 11.21.57 20.35 4.67 27.42 12.3-9.8 5.9-14.6 14.28-14.4 25.13.2 10.14 4.13 18.35 11.79 24.63 3.69 3.08 7.9 5.37 12.63 6.87-2.61 7.64-5.73 15.22-9.36 22.75zM119.22 31.85c0-6.9 2.47-13.43 7.41-19.6 4.94-6.17 11.19-10.38 18.75-12.64-.13 1.07-.2 2.05-.2 2.94 0 6.64-2.58 13.16-7.74 19.56-5.16 6.4-11.35 10.39-18.57 11.97-.27-.74-.4-1.48-.4-2.23z"/></svg>
+                  <span>Pay with Apple Pay</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- SUB-PANEL: Google Pay Panel -->
+            <div class="payment-subpanel" id="panelGooglePay" style="display: none;">
+              <div class="digital-wallet-box google-box">
+                <div class="wallet-icon-large">
+                  <svg width="32" height="32" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.27 21.39 7.35 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.27 2.61 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+                </div>
+                <h4>Google Pay 1-Click Checkout</h4>
+                <p>Complete your purchase instantly with any Visa, Mastercard, or bank account saved in your Google Account.</p>
+                <button type="button" class="btn btn-google-pay" id="btnGooglePayTrigger">
+                  <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.27 21.39 7.35 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.27 2.61 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+                  <span>Pay with GPay</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- SUB-PANEL: Cash on Delivery Panel -->
+            <div class="payment-subpanel" id="panelCod" style="display: none;">
+              <div class="cod-reassurance-box">
+                <div class="cod-icon-badge">📦 💵</div>
+                <h4>Paiement en Espèces à la Livraison</h4>
+                <p>Réglez le montant exact en Dirhams marocains (MAD) au livreur dès réception de votre colis à domicile ou au bureau. L'ouverture et l'inspection de l'écrin avant paiement sont autorisées.</p>
+                <div class="cod-perks">
+                  <span>✓ Aucun prépaiement requis</span>
+                  <span>✓ Échange gratuit sous 7 jours si la taille ne convient pas</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Bump Offer -->
+            <div class="order-bump-box">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="orderBumpCheckbox">
+                <span class="checkmark"></span>
+                <span>
+                  <strong>✨ Add Signature Microfiber Jewelry Polishing Cloth</strong> (+60 MAD)<br>
+                  <small style="color: var(--text-muted);">Formulated with anti-tarnish micro-emulsion to keep 18k vermeil radiant.</small>
+                </span>
+              </label>
+            </div>
+
+            <!-- Expandable Items Recap -->
+            <div class="checkout-order-recap">
+              <div class="recap-header-toggle" id="toggleRecapItems">
+                <h4>Items In Your Order</h4>
+                <span class="recap-toggle-text">Show details ▾</span>
+              </div>
+              <div class="recap-items-preview" id="checkoutRecapItemsList">
+                <!-- Dynamically populated in app.js -->
+              </div>
+              
+              <div class="recap-row" style="margin-top: 1rem;">
+                <span>Items Subtotal:</span>
+                <span id="recapSubtotal">0 MAD</span>
+              </div>
+              <div class="recap-row" id="recapBumpRow" style="display: none;">
+                <span>Polishing Cloth:</span>
+                <span id="recapBumpPrice">+60 MAD</span>
+              </div>
+              <div class="recap-row" id="recapDiscountRow" style="display: none;">
+                <span>Discount:</span>
+                <span id="recapDiscount">-0 MAD</span>
+              </div>
+              <div class="recap-row">
+                <span>Shipping:</span>
+                <span id="recapShipping">FREE</span>
+              </div>
+              <div class="recap-row total">
+                <strong>Total Amount to Pay:</strong>
+                <strong id="recapTotal">0 MAD</strong>
+              </div>
+            </div>
+
+            <div class="step-nav-buttons">
+              <button type="button" class="btn btn-outline" id="btnBackToStep1">‹ Back to Shipping</button>
+              <button type="submit" class="btn btn-primary" id="btnSubmitOrder">Complete Order ✨</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Step 3: Order Confirmation -->
+        <div class="checkout-step-page" id="checkoutStep3" style="display: none;">
+          <div class="order-success-card">
+            <div class="success-icon-wrap">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <span class="sub-title">MABROUK & THANK YOU</span>
+            <h2 class="section-title">Your Order Is Confirmed!</h2>
+            <p class="success-copy">
+              Thank you for choosing Golden Blossom Boutique. We are hand-preparing your pieces in our signature velvet pouch and luxury embossed gift box.
+            </p>
+
+            <!-- Automated WhatsApp Notification Card (System Auto-Sent) -->
+            <div class="whatsapp-dispatch-card" id="whatsappDispatchCard">
+              <div class="dispatch-header">
+                <div class="dispatch-status">
+                  <span class="status-pulse-dot"></span>
+                  <strong>Message Transmis Automatiquement par le Système</strong>
+                </div>
+                <span class="dispatch-badge">Destination: +212 780-760188</span>
+              </div>
+              <p class="dispatch-desc">
+                ✅ <strong>Notification automatique envoyée :</strong> Notre serveur a transmis instantanément l'intégralité de votre commande sur le WhatsApp de l'Atelier (<strong>+212 780-760188</strong>). Aucune action n'est requise de votre part, la préparation est lancée !
+              </p>
+              <div class="system-dispatch-meta">
+                <span>⚡ Envoi autonome par le serveur : <strong>Confirmé ✓</strong></span>
+                <span>📦 Suivi coursier Maroc : <strong>En cours de préparation</strong></span>
+              </div>
+            </div>
+
+            <div class="order-receipt-box">
+              <div class="receipt-item">
+                <span class="lbl">Order Number:</span>
+                <span class="val" id="orderConfirmId">#GBB-2026-8921</span>
+              </div>
+              <div class="receipt-item">
+                <span class="lbl">Recipient:</span>
+                <span class="val" id="orderConfirmName">Kenza Bennani</span>
+              </div>
+              <div class="receipt-item">
+                <span class="lbl">Delivery City:</span>
+                <span class="val" id="orderConfirmCity">Casablanca (24h Express)</span>
+              </div>
+              <div class="receipt-item">
+                <span class="lbl">Payment Method:</span>
+                <span class="val" id="orderConfirmPayment">Cash on Delivery</span>
+              </div>
+              <div class="receipt-item" id="orderConfirmGiftNoteRow" style="display:none;">
+                <span class="lbl">Gift Note:</span>
+                <span class="val" id="orderConfirmGiftNote" style="font-style: italic;"></span>
+              </div>
+              <div class="receipt-item total">
+                <span class="lbl">Total Payable:</span>
+                <span class="val" id="orderConfirmTotal">1,450 MAD</span>
+              </div>
+            </div>
+
+            <div class="order-success-actions">
+              <button class="btn btn-outline" id="btnDoneShopping">Continue Exploring Catalog</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       JEWELRY CARE GUIDE MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="careGuideBackdrop"></div>
+  <div class="care-guide-modal" id="careGuideModal" role="dialog" aria-modal="true">
+    <button class="close-modal-btn" id="closeCareGuideBtn">&times;</button>
+    <div class="care-guide-content">
+      <span class="sub-title">ATELIER ARCHIVES</span>
+      <h3 class="care-title">18K Heavy Vermeil Care Guide</h3>
+      <p class="care-intro">Golden Blossom pieces are crafted with 3 microns of solid 18-karat gold over 925 sterling silver. To preserve their luminous sheen for decades:</p>
+      
+      <div class="care-steps-grid">
+        <div class="care-step">
+          <div class="step-num">01</div>
+          <h4>Avoid Harsh Chemicals</h4>
+          <p>Apply perfumes, lotions, and body oils before putting on your jewelry. Let cosmetic products dry completely.</p>
+        </div>
+        <div class="care-step">
+          <div class="step-num">02</div>
+          <h4>Gentle Cleansing</h4>
+          <p>Polish gently using our complimentary micro-fiber polishing cloth. Never use harsh abrasive sonic cleaners.</p>
+        </div>
+        <div class="care-step">
+          <div class="step-num">03</div>
+          <h4>Storage in Velvet</h4>
+          <p>Store individual pieces inside the provided anti-tarnish velvet pouch to prevent surface scratches.</p>
+        </div>
+        <div class="care-step">
+          <div class="step-num">04</div>
+          <h4>Water Resistance</h4>
+          <p>Our heavy vermeil is safe for fresh water showers, but avoid prolonged chlorine pools and mineral hot springs.</p>
+        </div>
+      </div>
+
+      <div class="care-footer">
+        <button class="btn btn-primary" id="btnCloseCareGuideModal">Understood & Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FLOATING WHATSAPP VIP CONCIERGE BUTTON
+       ========================================================================= -->
+  <aside class="floating-whatsapp-widget" id="whatsappWidget">
+    <div class="whatsapp-tooltip" id="whatsappTooltip">
+      <div class="tooltip-header">
+        <strong>Golden Blossom Concierge</strong>
+        <span class="status-online">Online</span>
+      </div>
+      <p>Need help with sizing or prefer to order directly via WhatsApp? Chat with our Casablanca stylist: <strong>+212 780-760188</strong></p>
+    </div>
+    <a href="https://wa.me/212780760188?text=Hello%20Golden%20Blossom%20Boutique,%20I'd%20like%20to%20inquire%20about%20your%20collection!" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-fab" 
+       aria-label="Chat with Golden Blossom Boutique on WhatsApp at +212 780-760188">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.533 1.942.825 3.149.825l.001-.001c3.182 0 5.768-2.586 5.768-5.766 0-3.18-2.586-5.766-5.769-5.766zm0-2.172c4.418 0 8 3.582 8 8 0 1.545-.44 2.99-1.203 4.22l1.172 4.28-4.38-1.15c-1.19.71-2.57 1.13-4.047 1.13-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/></svg>
+      <span class="fab-pulse"></span>
+    </a>
+  </aside>
+
+  <!-- =========================================================================
+       MOBILE BOTTOM NAVIGATION BAR
+       ========================================================================= -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile Navigation Bar">
+    <a href="#hero" class="mobile-nav-tab active">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="#catalog" class="mobile-nav-tab">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span>Shop</span>
+    </a>
+    <button type="button" class="mobile-nav-tab" id="mobileSearchTrigger">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <span>Search</span>
+    </button>
+    <button type="button" class="mobile-nav-tab" id="mobileWishlistTrigger">
+      <div class="tab-icon-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <span class="mobile-tab-badge" id="mobileWishlistBadge">0</span>
+      </div>
+      <span>Saved</span>
+    </button>
+    <button type="button" class="mobile-nav-tab" id="mobileCartTrigger">
+      <div class="tab-icon-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="mobile-tab-badge" id="mobileCartBadge">0</span>
+      </div>
+      <span>Bag</span>
+    </button>
+  </nav>
+
+  <!-- =========================================================================
+       TOAST NOTIFICATION CONTAINER
+       ========================================================================= -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>

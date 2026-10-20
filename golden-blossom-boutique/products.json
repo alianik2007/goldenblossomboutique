@@ -1,0 +1,730 @@
+[
+  {
+    "title": "!m;",
+    "category": "jewelry",
+    "badge": "New In",
+    "priceMAD": 600,
+    "originalPriceMAD": 1000,
+    "stockCount": 5,
+    "materialType": "vermeil",
+    "material": "5",
+    "img": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+    "description": "9594",
+    "sizes": [
+      "22121"
+    ],
+    "id": "prod-mvg1dle6bo74",
+    "rating": 5,
+    "reviewCount": 1,
+    "gallery": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "title": "Silk Organza Evening Blouse",
+    "category": "apparel",
+    "priceMAD": 1450,
+    "stockCount": 6,
+    "img": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80",
+    "description": "Silk blouse",
+    "id": "prod-mvg0fwczodeb",
+    "rating": 5,
+    "reviewCount": 1,
+    "imgHover": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "title": "Emerald Cut Solitaire Ring",
+    "category": "jewelry",
+    "priceMAD": 1250,
+    "stockCount": 4,
+    "description": "Emerald solitaire crafted in 18K gold",
+    "id": "prod-mvg0fwcva4wk",
+    "rating": 5,
+    "reviewCount": 1,
+    "img": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "title": "Test Ring Manual Add",
+    "category": "jewelry",
+    "priceMAD": 750,
+    "stockCount": 5,
+    "materialType": "vermeil",
+    "material": "18K Gold",
+    "img": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
+    "description": "Handcrafted test ring",
+    "sizes": [
+      "52",
+      "54"
+    ],
+    "id": "prod-mvg085ql5ybg",
+    "rating": 5,
+    "reviewCount": 1,
+    "gallery": [
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": "prod-1",
+    "title": "Molten 'Lava' Drop Necklace",
+    "category": "jewelry",
+    "materialType": "vermeil",
+    "priceMAD": 890,
+    "originalPriceMAD": 1100,
+    "rating": 4.9,
+    "reviewCount": 142,
+    "badge": "Bestseller",
+    "badgeClass": "badge-gold",
+    "stockCount": 3,
+    "material": "18K Heavy Gold Vermeil (3 Microns) • Recycled 925 Silver",
+    "description": "Our signature talisman. Hand-sculpted using lost-wax casting to evoke liquid molten lava cooling in the Mediterranean breeze. Water-resistant and crafted for daily wear.",
+    "specs": [
+      "Length: 42cm + 5cm extension chain",
+      "Pendant: 22mm x 14mm fluid form",
+      "Finish: High-polish 18K Yellow Gold",
+      "Hypoallergenic & 100% Nickel-free"
+    ],
+    "sizes": [
+      "Standard (45cm)",
+      "Long (50cm)"
+    ],
+    "img": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1611591475152-478311399767?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Kenza B.",
+        "city": "Casablanca",
+        "rating": 5,
+        "text": "The weight and luminous shine of this molten pendant are perfection. I shower with it daily and the gold vermeil hasn’t faded at all!"
+      },
+      {
+        "name": "Sofia M.",
+        "city": "Rabat",
+        "rating": 5,
+        "text": "Ordered as an anniversary gift. The velvet box and wax seal made unboxing feel like a true high-jewelry experience."
+      }
+    ]
+  },
+  {
+    "id": "prod-2",
+    "title": "Sculptural Molten Gold Hoops",
+    "category": "jewelry",
+    "materialType": "vermeil",
+    "priceMAD": 650,
+    "originalPriceMAD": null,
+    "rating": 5,
+    "reviewCount": 98,
+    "badge": "Atelier Pick",
+    "badgeClass": "badge-gold",
+    "stockCount": 5,
+    "material": "18K Gold Vermeil over 925 Sterling Silver",
+    "description": "Substantial yet lightweight on the lobe. Featuring an organically textured silhouette that refracts light from every angle with understated elegance.",
+    "specs": [
+      "Diameter: 26mm",
+      "Weight: 4.8g per hoop (featherlight)",
+      "Closure: Secure click latch",
+      "Water-resistant for daily wear"
+    ],
+    "sizes": [
+      "22mm Petite",
+      "26mm Classic",
+      "32mm Bold"
+    ],
+    "img": "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Leila T.",
+        "city": "Marrakech",
+        "rating": 5,
+        "text": "I get asked about these hoops every single day in the office. They do not weigh down ears even after 10 hours."
+      },
+      {
+        "name": "Camille L.",
+        "city": "Paris",
+        "rating": 5,
+        "text": "Flawless organic finish. Moroccan craftsmanship with Parisian chic."
+      }
+    ]
+  },
+  {
+    "id": "prod-3",
+    "title": "The Casablanca Signet Ring",
+    "category": "jewelry",
+    "materialType": "vermeil",
+    "priceMAD": 580,
+    "originalPriceMAD": 720,
+    "rating": 4.8,
+    "reviewCount": 76,
+    "badge": "New Drop",
+    "badgeClass": "badge-new",
+    "stockCount": 4,
+    "material": "18K Heavy Vermeil • Hand-Brushed Surface",
+    "description": "A modern reimagining of the classic heirloom signet ring. Soft pillowed profile with an organically brushed face that catches sunlight effortlessly.",
+    "specs": [
+      "Top surface: 14mm x 11mm oval",
+      "Solid comfort-fit inner shank",
+      "Anti-tarnish protective sealing",
+      "Atelier stamped hallmark"
+    ],
+    "sizes": [
+      "EU 50 (US 5)",
+      "EU 52 (US 6)",
+      "EU 54 (US 7)",
+      "EU 56 (US 8)"
+    ],
+    "img": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Nisrine H.",
+        "city": "Tangier",
+        "rating": 5,
+        "text": "The size 52 fits like a dream on my pinky finger. Heavy, solid feel!"
+      }
+    ]
+  },
+  {
+    "id": "prod-4",
+    "title": "Baroque Pearl & Molten Link Bracelet",
+    "category": "jewelry",
+    "materialType": "pearl",
+    "priceMAD": 790,
+    "originalPriceMAD": null,
+    "rating": 4.9,
+    "reviewCount": 64,
+    "badge": "Limited 18K",
+    "badgeClass": "badge-limited",
+    "stockCount": 2,
+    "material": "Natural AAA Freshwater Baroque Pearl • 18K Vermeil",
+    "description": "Juxtaposing organic, luminous baroque pearls against textured molten links. Each freshwater pearl is completely unique, hand-selected in Casablanca.",
+    "specs": [
+      "Length: 17cm + 3cm extension",
+      "Pearl size: 10-12mm irregular baroque",
+      "Custom cast toggle clasp",
+      "Comes with luxury velvet case"
+    ],
+    "sizes": [
+      "Small (17cm)",
+      "Medium (19cm)"
+    ],
+    "img": "https://images.unsplash.com/photo-1611591475152-478311399767?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1611591475152-478311399767?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Ines K.",
+        "city": "Casablanca",
+        "rating": 5,
+        "text": "The pearl lustre is incredible. Looks like a bespoke high-end piece from Place Vendôme."
+      }
+    ]
+  },
+  {
+    "id": "prod-5",
+    "title": "Fluid Molten Dome Ring",
+    "category": "jewelry",
+    "materialType": "vermeil",
+    "priceMAD": 520,
+    "originalPriceMAD": null,
+    "rating": 4.8,
+    "reviewCount": 88,
+    "badge": "Bestseller",
+    "badgeClass": "badge-gold",
+    "stockCount": 7,
+    "material": "Recycled Silver plated with 18K Gold",
+    "description": "A tactile, fluid dome ring that mirrors the motion of running water. Its hollow-carved interior ensures supreme comfort for everyday stacking.",
+    "specs": [
+      "Dome height: 8mm",
+      "Weight: 5.6g",
+      "Mirror and satin contrast finish",
+      "Designed to stack with thin bands"
+    ],
+    "sizes": [
+      "EU 50",
+      "EU 52",
+      "EU 54",
+      "EU 56"
+    ],
+    "img": "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Fatima-Zahra",
+        "city": "Fes",
+        "rating": 5,
+        "text": "Smooth, tactile, and so comfortable. Never catches on knits or silk!"
+      }
+    ]
+  },
+  {
+    "id": "prod-6",
+    "title": "Layered Snake Chain & Pendant Set",
+    "category": "jewelry",
+    "materialType": "vermeil",
+    "priceMAD": 980,
+    "originalPriceMAD": 1250,
+    "rating": 5,
+    "reviewCount": 110,
+    "badge": "Atelier Set",
+    "badgeClass": "badge-gold",
+    "stockCount": 4,
+    "material": "18K Heavy Vermeil • Italian Herringbone & Molten Drop",
+    "description": "The definitive Parisian-Moroccan neck stack. Includes our supple 3mm herringbone snake chain and an adjustable molten coin pendant necklace.",
+    "specs": [
+      "Herringbone Chain: 40cm",
+      "Pendant Chain: 48cm with 5cm extender",
+      "Wear together or separately",
+      "Anti-kink Italian craftsmanship"
+    ],
+    "sizes": [
+      "One Size (Dual Layer Set)"
+    ],
+    "img": "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Sara E.",
+        "city": "Agadir",
+        "rating": 5,
+        "text": "Two stunning necklaces for this price is unbeatable. The snake chain lies completely flat against the collarbone."
+      }
+    ]
+  },
+  {
+    "id": "prod-7",
+    "title": "Champagne Silk Crepe Slip Dress",
+    "category": "apparel",
+    "materialType": "silk",
+    "priceMAD": 1450,
+    "originalPriceMAD": 1750,
+    "rating": 4.9,
+    "reviewCount": 94,
+    "badge": "Iconic",
+    "badgeClass": "badge-gold",
+    "stockCount": 3,
+    "material": "100% Mulberry Silk (22 Momme Sand-Washed)",
+    "description": "Cut on the true bias to drape gently across contours. Designed with delicate rouleau straps, subtle cowl neckline, and a gentle floor-skimming hem.",
+    "specs": [
+      "Fabric: 100% Grade 6A Mulberry Silk",
+      "Care: Dry clean or cold hand wash with silk detergent",
+      "Adjustable shoulder ties",
+      "French seams throughout"
+    ],
+    "sizes": [
+      "XS (34)",
+      "S (36)",
+      "M (38)",
+      "L (40)"
+    ],
+    "img": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Nour E.",
+        "city": "Rabat",
+        "rating": 5,
+        "text": "Hangs like liquid gold. The sand-washed silk has a luxurious matte sheen that does not cling."
+      }
+    ]
+  },
+  {
+    "id": "prod-8",
+    "title": "Structured Ivory Linen Double-Breasted Blazer",
+    "category": "apparel",
+    "materialType": "silk",
+    "priceMAD": 1850,
+    "originalPriceMAD": null,
+    "rating": 5,
+    "reviewCount": 52,
+    "badge": "New In",
+    "badgeClass": "badge-new",
+    "stockCount": 4,
+    "material": "100% Heavyweight Normandy Linen • Viscose Lining",
+    "description": "A masterclass in modern relaxed tailoring. Peak lapels, sustainable horn buttons, and an architectural shoulder that pairs effortlessly with silk or denim.",
+    "specs": [
+      "Fit: Relaxed oversized silhouette",
+      "Pockets: Twin jetted flap pockets & interior chest welt",
+      "Buttons: Real sustainable horn buttons",
+      "Vent: Dual back vents"
+    ],
+    "sizes": [
+      "S (36)",
+      "M (38)",
+      "L (40)"
+    ],
+    "img": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Meriem B.",
+        "city": "Casablanca",
+        "rating": 5,
+        "text": "The cut of this blazer gives instant posture. Quality easily rivals luxury European designers."
+      }
+    ]
+  },
+  {
+    "id": "prod-9",
+    "title": "Pleated Wide-Leg Crepe Trousers",
+    "category": "apparel",
+    "materialType": "silk",
+    "priceMAD": 950,
+    "originalPriceMAD": null,
+    "rating": 4.8,
+    "reviewCount": 47,
+    "badge": null,
+    "stockCount": 6,
+    "material": "Italian Viscose Wool-Crepe Blend",
+    "description": "High-waisted with deep front pleats that create fluid drape in motion. Tailored for elevated day-to-night styling.",
+    "specs": [
+      "Rise: High-rise waist with tailored waistband",
+      "Inseam: 82cm with 4cm let-out hem",
+      "Pockets: Deep side slant pockets",
+      "Closure: Concealed hook and zip fly"
+    ],
+    "sizes": [
+      "XS (34)",
+      "S (36)",
+      "M (38)",
+      "L (40)"
+    ],
+    "img": "https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Yasmine K.",
+        "city": "Marrakech",
+        "rating": 5,
+        "text": "Elongates the silhouette beautifully. Crepe doesn’t wrinkle during long flights."
+      }
+    ]
+  },
+  {
+    "id": "prod-10",
+    "title": "Ribbed Cashmere & Silk Knit Top",
+    "category": "apparel",
+    "materialType": "cashmere",
+    "priceMAD": 1150,
+    "originalPriceMAD": 1390,
+    "rating": 4.9,
+    "reviewCount": 68,
+    "badge": "Seasonal",
+    "badgeClass": "badge-gold",
+    "stockCount": 3,
+    "material": "70% Mongolian Cashmere • 30% Mulberry Silk",
+    "description": "Featherlight softness designed to fit like a second skin. Open ballet neckline with finely ribbed cuffs and hem.",
+    "specs": [
+      "Gauge: 16-gauge ultra-fine knit",
+      "Texture: Whisper-soft and breathable",
+      "Neckline: Boatneck / ballet neckline",
+      "Pill-resistant fibers"
+    ],
+    "sizes": [
+      "XS/S",
+      "M/L"
+    ],
+    "img": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Ghita A.",
+        "city": "Casablanca",
+        "rating": 5,
+        "text": "Pure cloud on skin. Perfect under the ivory blazer."
+      }
+    ]
+  },
+  {
+    "id": "prod-11",
+    "title": "Casablanca Sunset Silk Resort Kimono",
+    "category": "apparel",
+    "materialType": "silk",
+    "priceMAD": 1650,
+    "originalPriceMAD": null,
+    "rating": 5,
+    "reviewCount": 39,
+    "badge": "Limited Run",
+    "badgeClass": "badge-limited",
+    "stockCount": 2,
+    "material": "Pure Habotai Silk • Hand-Rolled Edges",
+    "description": "An ethereal wrap piece created for sunset soirees and lounge luxury. Hand-printed with warm ochre and terracotta motifs inspired by the Moroccan coast.",
+    "specs": [
+      "Length: Maxi ankle-length (135cm)",
+      "Belt: Detachable silk sash belt with fringe",
+      "Sleeves: Wide kimono kimono drape",
+      "Dry clean only"
+    ],
+    "sizes": [
+      "One Size (Fluid Drape)"
+    ],
+    "img": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Salma D.",
+        "city": "Tangier",
+        "rating": 5,
+        "text": "Wore this to a rooftop gathering in Tangier. The silk moves like poetry."
+      }
+    ]
+  },
+  {
+    "id": "prod-12",
+    "title": "The Anfa Sculptural Leather Bucket Bag",
+    "category": "accessories",
+    "materialType": "leather",
+    "priceMAD": 1890,
+    "originalPriceMAD": 2200,
+    "rating": 4.9,
+    "reviewCount": 83,
+    "badge": "Bestseller",
+    "badgeClass": "badge-gold",
+    "stockCount": 4,
+    "material": "Full-Grain Italian Calfskin Leather • Gold Hardware",
+    "description": "An architectural bucket bag handcrafted by artisan leatherworkers. Rigid oval base, cinch drawstring closure, and detachable crossbody strap.",
+    "specs": [
+      "Dimensions: 22cm x 18cm x 14cm",
+      "Strap Drop: 48cm - 56cm adjustable",
+      "Lining: Luxurious bonded suede interior",
+      "Includes dust bag & leather balm"
+    ],
+    "sizes": [
+      "Caramel Cuir",
+      "Noir Black",
+      "Oat Milk"
+    ],
+    "img": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Kawtar B.",
+        "city": "Casablanca",
+        "rating": 5,
+        "text": "The calfskin smells wonderful and the gold hardware has real substance."
+      }
+    ]
+  },
+  {
+    "id": "prod-13",
+    "title": "Minimalist Baguette Shoulder Bag in Noir",
+    "category": "accessories",
+    "materialType": "leather",
+    "priceMAD": 1420,
+    "originalPriceMAD": null,
+    "rating": 4.8,
+    "reviewCount": 65,
+    "badge": "New In",
+    "badgeClass": "badge-new",
+    "stockCount": 5,
+    "material": "Smooth Semi-Gloss Calf Leather",
+    "description": "90s minimalist silhouette refined with discrete gold foil branding and a comfortable flat shoulder strap. The everyday companion.",
+    "specs": [
+      "Dimensions: 27cm x 13cm x 6cm",
+      "Interior: Card slot and zip compartment",
+      "Closure: Smooth magnetic flap",
+      "Hardware: Brushed champagne gold"
+    ],
+    "sizes": [
+      "Classic Noir",
+      "Burgundy Merlot"
+    ],
+    "img": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Rim M.",
+        "city": "Rabat",
+        "rating": 5,
+        "text": "Holds phone, lipstick, cardholder, and keys with room to spare."
+      }
+    ]
+  },
+  {
+    "id": "prod-14",
+    "title": "Artisanal Hand-Stitched Leather Ankle Boots",
+    "category": "accessories",
+    "materialType": "leather",
+    "priceMAD": 2100,
+    "originalPriceMAD": 2500,
+    "rating": 5,
+    "reviewCount": 72,
+    "badge": "Atelier Boots",
+    "badgeClass": "badge-gold",
+    "stockCount": 3,
+    "material": "Vegetable-Tanned Calfskin • Leather Sole with Rubber Inset",
+    "description": "The boots you wear for ten years. Soft calfskin that molds to your stride, chisel toe profile, and a stacked 50mm heel built for walking.",
+    "specs": [
+      "Heel Height: 50mm stacked Cuban heel",
+      "Construction: Blake-stitched durable sole",
+      "Zipper: Interior antique brass zip",
+      "Hand-buffed natural wax patina"
+    ],
+    "sizes": [
+      "EU 36",
+      "EU 37",
+      "EU 38",
+      "EU 39",
+      "EU 40",
+      "EU 41"
+    ],
+    "img": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Kenza S.",
+        "city": "Casablanca",
+        "rating": 5,
+        "text": "Walked all day through Gauthier and Triangle d’Or with zero blisters. Worth every dirham."
+      }
+    ]
+  },
+  {
+    "id": "prod-15",
+    "title": "Woven Nappa Leather Envelope Clutch",
+    "category": "accessories",
+    "materialType": "leather",
+    "priceMAD": 1180,
+    "originalPriceMAD": null,
+    "rating": 4.7,
+    "reviewCount": 41,
+    "badge": null,
+    "stockCount": 6,
+    "material": "Hand-Woven Lamb Nappa Leather",
+    "description": "Plush, pillowy woven leather that folds comfortably under the arm. Fitted with a concealed zip and magnetic clasp for evening effortless charm.",
+    "specs": [
+      "Dimensions: 30cm x 18cm",
+      "Structure: Soft foldable slouch",
+      "Interior: 100% Cotton drill lining",
+      "Includes wristlet strap"
+    ],
+    "sizes": [
+      "Gold Champagne",
+      "Obsidian Black",
+      "Espresso"
+    ],
+    "img": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Dounia F.",
+        "city": "Marrakech",
+        "rating": 5,
+        "text": "Buttery soft woven leather. Looks breathtaking paired with the silk dress."
+      }
+    ]
+  },
+  {
+    "id": "prod-16",
+    "title": "Minimal Strappy Block-Heel Leather Mules",
+    "category": "accessories",
+    "materialType": "leather",
+    "priceMAD": 1350,
+    "originalPriceMAD": 1600,
+    "rating": 4.9,
+    "reviewCount": 58,
+    "badge": "Limited",
+    "badgeClass": "badge-limited",
+    "stockCount": 4,
+    "material": "Nappa Kidskin • Cushioned Leather Insole",
+    "description": "Delicate asymmetric straps that flatter the foot while providing sturdy arch support. Finished with a sculptural block kitten heel.",
+    "specs": [
+      "Heel Height: 45mm comfortable kitten block",
+      "Footbed: Memory foam cushioned padding",
+      "Upper: Butter-soft kidskin straps",
+      "Made for warm Moroccan nights"
+    ],
+    "sizes": [
+      "EU 36",
+      "EU 37",
+      "EU 38",
+      "EU 39",
+      "EU 40"
+    ],
+    "img": "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=800&q=80",
+    "imgHover": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80"
+    ],
+    "reviews": [
+      {
+        "name": "Soraya C.",
+        "city": "Casablanca",
+        "rating": 5,
+        "text": "The 45mm heel is the sweet spot. Elegant without being painful!"
+      }
+    ]
+  }
+]

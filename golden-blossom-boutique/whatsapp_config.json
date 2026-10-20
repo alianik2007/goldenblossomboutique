@@ -1,0 +1,9 @@
+{
+  "provider": "greenapi",
+  "targetPhone": "212780760188",
+  "chatId": "212780760188@c.us",
+  "apiUrl": "https://7107.api.greenapi.com",
+  "idInstance": "710722774108",
+  "apiTokenInstance": "e9a32d44f32a4e69ab10fd7abc747c16c350a85b1ee4471ab5",
+  "autoSendEnabled": true
+}
